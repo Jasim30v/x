@@ -2,19 +2,18 @@
 """
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                            ║
-║  💖  MNAENCA 2026 - PINK ROSE GOLD LUXURY EDITION  💖    ║
-║     Ultimate Version - Full Stack - All Features          ║
-║     ✨ PROFILE 3.0 - Chat 2.0 - Auth 2.0                  ║
+║  💎  MNAENCA 2026 - EMERALD GREEN GLASS LUXURY EDITION  💎 ║
+║     Ultimate Version - 10 Files - 4000+ Lines              ║
+║     ✨ PROFILE 2.0 - Advanced Professional Profile         ║
 ║                                                            ║
-║  🔥  Firebase: bomk-9f6ec                                 ║
-║  ☁️   Cloudinary: lkqbt5yq / yg55_gk                    ║
+║  🔥  Firebase: muvg-42126                                 ║
+║  ☁️   Cloudinary: trz3ktjf / s44_kk                     ║
 ║  👑  Admin: jasim28v@gmail.com                            ║
 ║  👾  Avatars: DiceBear Big Smile (Random)                  ║
-║  💖  Design: Pink Rose Gold Luxury                        ║
-║  📱  RESPONSIVE (Mobile + Desktop/Landscape)              ║
-║  🎬  NATURAL VIDEO DISPLAY (No Zoom/Crop)                 ║
-║  📝  TEXT BELOW VIDEO                                     ║
-║  🎤  VOICE MESSAGES IN CHAT                               ║
+║  💎  Design: Light Green Glass Luxury                      ║
+║  ✨  RESPONSIVE (Mobile + Desktop/Landscape)            ║
+║  🎬  NATURAL VIDEO DISPLAY (No Zoom/Crop)               ║
+║  📝  TEXT BELOW VIDEO                                    ║
 ║                                                            ║
 ╚══════════════════════════════════════════════════════════════╝
 """
@@ -25,40 +24,42 @@ import json
 import shutil
 
 # ═══════════════════════════════════════════════════════════
-# 💖 CONFIGURATION - الإعدادات
+# 💎 CONFIGURATION - الإعدادات
 # ═══════════════════════════════════════════════════════════
 
 FIREBASE_CONFIG = {
-    "apiKey": "AIzaSyAAiH5kBtNBfuRbXddoCuLet9IGMG2U7q0",
-    "authDomain": "bomk-9f6ec.firebaseapp.com",
-    "databaseURL": "https://bomk-9f6ec-default-rtdb.firebaseio.com",
-    "projectId": "bomk-9f6ec",
-    "storageBucket": "bomk-9f6ec.firebasestorage.app",
-    "messagingSenderId": "743058000945",
-    "appId": "1:743058000945:web:a862e1eecf7d3d98925910",
-    "measurementId": "G-7F4W2H5Z3Y"
+    "apiKey": "AIzaSyCqDvG98pEqmZHKZienquJEq6gS1kNjK8M",
+    "authDomain": "muvg-42126.firebaseapp.com",
+    "databaseURL": "https://muvg-42126-default-rtdb.europe-west1.firebasedatabase.app",
+    "projectId": "muvg-42126",
+    "storageBucket": "muvg-42126.firebasestorage.app",
+    "messagingSenderId": "514075097173",
+    "appId": "1:514075097173:web:6fab4e9598549691cc7cdc",
+    "measurementId": "G-4VP8E6WJ48"
 }
 
-CLOUD_NAME = "lkqbt5yq"
-UPLOAD_PRESET = "yg55_gk"
+CLOUD_NAME = "jkpbrbwt"
+UPLOAD_PRESET = "s23_sg"
 ADMIN_EMAILS_JS = "['jasim28v@gmail.com']"
 DICEBEAR_URL = "https://api.dicebear.com/7.x/big-smile/svg"
 APP_NAME = "MNAENCA"
+WATERMARK_TEXT = "💎 MNAENCA"
+WATERMARK_URL = "https://res.cloudinary.com/trz3ktjf/image/upload/v1/watermark_mnaenca"
 
-# 💖 Pink Rose Gold Luxury Palette
-PINK_COLORS_JS = """[
-    "linear-gradient(135deg, #831843, #be185d, #ec4899)",
-    "linear-gradient(135deg, #9d174d, #db2777, #f472b6)",
-    "linear-gradient(135deg, #4a0e2b, #be185d, #f9a8d4)",
-    "linear-gradient(135deg, #831843, #ec4899, #fbcfe8)",
-    "linear-gradient(135deg, #701a3d, #db2777, #fda4af)",
-    "linear-gradient(135deg, #0f172a, #831843, #be185d)"
+# 💎 Light Green Luxury Palette
+EMERALD_COLORS_JS = """[
+    "linear-gradient(135deg, #064e3b, #059669, #10b981)",
+    "linear-gradient(135deg, #022c22, #047857, #34d399)",
+    "linear-gradient(135deg, #065f46, #10b981, #6ee7b7)",
+    "linear-gradient(135deg, #064e3b, #14b8a6, #5eead4)",
+    "linear-gradient(135deg, #047857, #34d399, #a7f3d0)",
+    "linear-gradient(135deg, #0f172a, #064e3b, #10b981)"
 ]"""
 
 OUTPUT_DIR = "output"
 
 # ═══════════════════════════════════════════════════════════
-# 💖 UTILITY - دوال مساعدة
+# 💎 UTILITY - دوال مساعدة
 # ═══════════════════════════════════════════════════════════
 
 TOTAL_LINES = 0
@@ -77,21 +78,21 @@ def write(filename, content):
 def section(title):
     """طباعة عنوان القسم"""
     print(f"\n{'='*60}")
-    print(f"  💖  {title}")
+    print(f"  💎  {title}")
     print(f"{'='*60}")
 
 # ═══════════════════════════════════════════════════════════
-# 💖 COMMON CSS - ستايل مشترك (زهري)
+# 💎 COMMON CSS - ستايل مشترك
 # ═══════════════════════════════════════════════════════════
 
 COMMON_CSS = """
     :root{
-        --glass:rgba(236,72,153,0.03);
-        --border:rgba(236,72,153,0.12);
-        --accent:#ec4899;
-        --accent2:#f472b6;
-        --bg:#140511;
-        --card:rgba(236,72,153,0.06);
+        --glass:rgba(16,185,129,0.03);
+        --border:rgba(16,185,129,0.12);
+        --accent:#10b981;
+        --accent2:#34d399;
+        --bg:#05140b;
+        --card:rgba(16,185,129,0.06);
         --danger:#ef4444;
         --success:#22c55e;
         --warning:#f59e0b;
@@ -114,10 +115,10 @@ COMMON_CSS = """
     @keyframes slideDown{from{transform:translateY(0)}to{transform:translateY(100%)}}
     @keyframes scaleIn{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
     @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-    @keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(236,72,153,0.3)}50%{box-shadow:0 0 40px rgba(244,114,182,0.7)}}
+    @keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(16,185,129,0.3)}50%{box-shadow:0 0 40px rgba(52,211,153,0.7)}}
     .spinner{
         width:36px;height:36px;
-        border:3px solid rgba(236,72,153,0.2);
+        border:3px solid rgba(16,185,129,0.2);
         border-top-color:var(--accent);
         border-radius:50%;
         animation:spin 0.7s linear infinite;
@@ -125,14 +126,14 @@ COMMON_CSS = """
     }
     .toast-msg{
         position:fixed;bottom:120px;left:50%;transform:translateX(-50%);
-        background:rgba(20,5,17,0.95);padding:12px 24px;border-radius:30px;
-        z-index:10000;border:1px solid rgba(236,72,153,0.3);font-size:13px;
+        background:rgba(5,20,11,0.95);padding:12px 24px;border-radius:30px;
+        z-index:10000;border:1px solid rgba(16,185,129,0.3);font-size:13px;
         opacity:0;transition:opacity 0.3s;pointer-events:none;white-space:nowrap;
         box-shadow:0 8px 32px rgba(0,0,0,0.4);
     }
     .toast-msg.show{opacity:1}
     .overlay{
-        position:fixed;inset:0;background:rgba(20,5,17,0.97);
+        position:fixed;inset:0;background:rgba(5,20,11,0.97);
         backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);
         z-index:400;overflow-y:auto;
         animation:fadeIn 0.3s ease;
@@ -140,17 +141,17 @@ COMMON_CSS = """
     .overlay-header{
         display:flex;justify-content:space-between;align-items:center;
         padding:16px 20px;border-bottom:1px solid var(--border);
-        position:sticky;top:0;background:rgba(20,5,17,0.9);
+        position:sticky;top:0;background:rgba(5,20,11,0.9);
         backdrop-filter:blur(20px);z-index:5;
     }
     .overlay-header h3{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px}
     .btn-close-overlay{
-        background:rgba(236,72,153,0.1);border:1px solid var(--border);
+        background:rgba(16,185,129,0.1);border:1px solid var(--border);
         color:#fff;width:36px;height:36px;border-radius:50%;
         display:flex;align-items:center;justify-content:center;
         cursor:pointer;font-size:16px;transition:all 0.3s;
     }
-    .btn-close-overlay:hover{background:rgba(236,72,153,0.25);box-shadow:0 0 15px rgba(236,72,153,0.3)}
+    .btn-close-overlay:hover{background:rgba(16,185,129,0.25);box-shadow:0 0 15px rgba(16,185,129,0.3)}
 
     /* ✨ RESPONSIVE LAYOUT ✨ */
     #mainApp {
@@ -180,7 +181,7 @@ COMMON_CSS = """
             height: 100vh;
             padding: 24px 16px;
             border-right: 1px solid var(--border);
-            background: rgba(20,5,17,0.6);
+            background: rgba(5,20,11,0.6);
             flex-shrink: 0;
             overflow-y: auto;
         }
@@ -189,7 +190,7 @@ COMMON_CSS = """
             font-size: 24px;
             font-weight: 800;
             margin-bottom: 30px;
-            background: linear-gradient(to bottom,#fff,#fbcfe8);
+            background: linear-gradient(to bottom,#fff,#a7f3d0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex; align-items: center; gap: 10px;
@@ -203,7 +204,7 @@ COMMON_CSS = """
             transition: all 0.3s;
         }
         .sidebar-nav-item:hover, .sidebar-nav-item.active {
-            background: rgba(236,72,153,0.1);
+            background: rgba(16,185,129,0.1);
             color: #fff;
         }
         .sidebar-nav-item i { font-size: 20px; width: 24px; text-align: center; }
@@ -224,13 +225,13 @@ COMMON_CSS = """
 """
 
 # ═══════════════════════════════════════════════════════════
-# 💖 1. firebase-config.js
+# 💎 1. firebase-config.js
 # ═══════════════════════════════════════════════════════════
 
 def build_config():
-    return f"""// 💖 MNAENCA 2026 - Pink Rose Gold Luxury Configuration
-// Firebase: bomk-9f6ec | Cloudinary: {CLOUD_NAME}
-// ✨ PREMIUM: TikTok Comments + Share System + Voice Messages + Enhanced Profile + Posts
+    return f"""// 💎 MNAENCA 2026 - Emerald Green Luxury Configuration
+// Firebase: muvg-42126 | Cloudinary: {CLOUD_NAME}
+// ✨ PREMIUM: TikTok Comments + Share System + Watermark + Enhanced Profile + Posts
 
 const firebaseConfig = {{
     apiKey: "{FIREBASE_CONFIG['apiKey']}",
@@ -252,24 +253,25 @@ const db = firebase.database();
 const CLOUD_NAME = "{CLOUD_NAME}";
 const UPLOAD_PRESET = "{UPLOAD_PRESET}";
 const CLOUDINARY_UPLOAD_URL = `https://api.cloudinary.com/v1_1/${{CLOUD_NAME}}/auto/upload`;
-const CLOUDINARY_RAW_UPLOAD_URL = `https://api.cloudinary.com/v1_1/${{CLOUD_NAME}}/raw/upload`;
 
-// 💖 MNAENCA Settings
+// 💎 MNAENCA Settings
 const ADMIN_EMAILS = {ADMIN_EMAILS_JS};
 const DICEBEAR_URL = "{DICEBEAR_URL}";
-const COVER_COLORS = {PINK_COLORS_JS};
+const COVER_COLORS = {EMERALD_COLORS_JS};
 
-// 💖 App Info
+// 💎 App Info
 const APP_NAME = "{APP_NAME}";
-const APP_VERSION = "2026.5";
-const PRIMARY_COLOR = "#ec4899";
-const SECONDARY_COLOR = "#fbcfe8";
+const APP_VERSION = "2026.4";
+const PRIMARY_COLOR = "#10b981";
+const SECONDARY_COLOR = "#a7f3d0";
+const WATERMARK_TEXT = "{WATERMARK_TEXT}";
+const WATERMARK_URL = "{WATERMARK_URL}";
 
-console.log('💖 %c'+APP_NAME+' v'+APP_VERSION+' Ready ✨', 'color: #ec4899; font-size: 16px; font-weight: bold;');
+console.log('💎 %c'+APP_NAME+' v'+APP_VERSION+' Ready ✨', 'color: #10b981; font-size: 16px; font-weight: bold;');
 """
 
 # ═══════════════════════════════════════════════════════════
-# 💖 2. auth.html - تسجيل الدخول والاشتراك (مطور بالكامل)
+# 💎 2. auth.html - تسجيل الدخول والاشتراك (مطور بالكامل)
 # ═══════════════════════════════════════════════════════════
 
 def build_auth():
@@ -278,209 +280,961 @@ def build_auth():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>💖 MNAENCA | دخول</title>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>💎 MNAENCA | دخول</title>
+    <!-- Firebase SDK v10.12.0 (أحدث إصدار) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         {COMMON_CSS}
-        body{{
-            min-height:100vh;
-            background:radial-gradient(ellipse at top, #1a0a14, #140511, #0a0208);
-            display:flex;align-items:center;justify-content:center;
-            overflow:hidden;position:relative;
+        :root {{
+            --emerald-400: #34d399;
+            --emerald-500: #10b981;
+            --emerald-600: #059669;
+            --surface-glass: rgba(16, 185, 129, 0.04);
+            --border-glass: rgba(16, 185, 129, 0.15);
         }}
-        .bg-orb{{
-            position:fixed;border-radius:50%;filter:blur(130px);opacity:0.25;
-            animation:orbFloat 20s infinite alternate;pointer-events:none;
+
+        * {{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }}
-        .bg-orb:nth-child(1){{width:400px;height:400px;background:#ec4899;top:-100px;left:-100px}}
-        .bg-orb:nth-child(2){{width:350px;height:350px;background:#f472b6;bottom:-100px;right:-100px;animation-delay:5s}}
-        .bg-orb:nth-child(3){{width:300px;height:300px;background:#fbcfe8;top:50%;left:50%;animation-delay:10s}}
-        @keyframes orbFloat{{0%{{transform:translate(0,0) scale(1)}}100%{{transform:translate(50px,-50px) scale(1.3)}}}}
 
-        .card{{
-            position:relative;z-index:1;width:90%;max-width:420px;
-            background:rgba(236,72,153,0.03);
-            backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);
-            border-radius:32px;padding:36px 24px;
-            border:1px solid rgba(236,72,153,0.2);
-            box-shadow:0 30px 70px rgba(236,72,153,0.1),inset 0 0 30px rgba(236,72,153,0.02);
-            animation:fadeUp 0.8s ease;
+        body {{
+            min-height: 100vh;
+            background: radial-gradient(ellipse at top, #0f172a 0%, #05140b 50%, #020617 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
         }}
-        .logo{{
-            width:70px;height:70px;margin:0 auto 20px;
-            background:linear-gradient(135deg, rgba(236,72,153,0.3), rgba(244,114,182,0.3));
-            border-radius:20px;display:flex;align-items:center;justify-content:center;
-            font-size:36px;border:1px solid rgba(236,72,153,0.2);
-            animation:glowPulse 3s ease-in-out infinite;
+
+        /* Background orbs with enhanced animation */
+        .bg-orb {{
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.2;
+            animation: orbFloat 25s infinite alternate;
+            pointer-events: none;
         }}
-        h1{{text-align:center;font-size:36px;font-weight:900;background:linear-gradient(to bottom, #fff, #fbcfe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}}
-        .sub{{text-align:center;color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:20px}}
-
-        .tabs{{display:flex;gap:4px;background:rgba(236,72,153,0.06);border-radius:40px;padding:4px;margin-bottom:24px}}
-        .tab{{flex:1;padding:12px;background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;border-radius:40px;font-size:14px;transition:all 0.3s;font-weight:500}}
-        .tab.active{{background:linear-gradient(135deg, #ec4899, #f472b6);color:#fff;box-shadow:0 8px 20px rgba(236,72,153,0.4)}}
-
-        .form{{display:none;animation:fadeIn 0.4s ease}}
-        .form.active{{display:block}}
-
-        input{{
-            width:100%;padding:15px 18px;margin:8px 0;
-            border-radius:50px;background:rgba(236,72,153,0.04);
-            border:1px solid rgba(236,72,153,0.15);color:#fff;
-            font-size:14px;outline:none;transition:all 0.4s;
+        .bg-orb:nth-child(1) {{
+            width: 500px;
+            height: 500px;
+            background: #10b981;
+            top: -150px;
+            left: -150px;
+            animation-delay: 0s;
         }}
-        input:focus{{border-color:rgba(236,72,153,0.6);box-shadow:0 0 20px rgba(236,72,153,0.1);background:rgba(236,72,153,0.08)}}
-        input::placeholder{{color:rgba(255,255,255,0.3)}}
-
-        button{{
-            width:100%;padding:15px;margin-top:18px;
-            background:linear-gradient(135deg, #ec4899, #f472b6);
-            border:none;border-radius:50px;color:#fff;
-            font-weight:bold;font-size:15px;cursor:pointer;
-            transition:all 0.3s;box-shadow:0 10px 30px rgba(236,72,153,0.4);
+        .bg-orb:nth-child(2) {{
+            width: 400px;
+            height: 400px;
+            background: #34d399;
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -7s;
         }}
-        button:hover{{transform:translateY(-2px);box-shadow:0 20px 40px rgba(236,72,153,0.6)}}
-        button:active{{transform:scale(0.97)}}
-        button:disabled{{opacity:0.5;pointer-events:none}}
+        .bg-orb:nth-child(3) {{
+            width: 350px;
+            height: 350px;
+            background: #6ee7b7;
+            top: 50%;
+            left: 50%;
+            animation-delay: -14s;
+        }}
+        .bg-orb:nth-child(4) {{
+            width: 250px;
+            height: 250px;
+            background: #a7f3d0;
+            top: 20%;
+            right: 20%;
+            animation-delay: -21s;
+        }}
 
-        .msg{{text-align:center;color:#fca5a5;font-size:13px;margin-top:12px;min-height:20px}}
-        .msg.success{{color:#4ade80}}
+        @keyframes orbFloat {{
+            0% {{
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }}
+            33% {{
+                transform: translate(60px, -40px) scale(1.2) rotate(120deg);
+            }}
+            66% {{
+                transform: translate(-30px, 50px) scale(0.9) rotate(240deg);
+            }}
+            100% {{
+                transform: translate(40px, -30px) scale(1.15) rotate(360deg);
+            }}
+        }}
+
+        /* Particle effect */
+        .particles {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }}
+        .particle {{
+            position: absolute;
+            background: rgba(16, 185, 129, 0.3);
+            border-radius: 50%;
+            animation: floatUp linear infinite;
+        }}
+        @keyframes floatUp {{
+            0% {{
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }}
+            10% {{
+                opacity: 1;
+            }}
+            90% {{
+                opacity: 1;
+            }}
+            100% {{
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }}
+        }}
+
+        /* Main card with enhanced glass morphism */
+        .card {{
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 440px;
+            background: rgba(16, 185, 129, 0.03);
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
+            border-radius: 36px;
+            padding: 40px 28px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            box-shadow: 
+                0 30px 80px rgba(16, 185, 129, 0.1),
+                0 0 0 1px rgba(16, 185, 129, 0.05),
+                inset 0 0 40px rgba(16, 185, 129, 0.02);
+            animation: cardFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }}
+        .card:hover {{
+            transform: translateY(-2px);
+            box-shadow: 
+                0 35px 90px rgba(16, 185, 129, 0.15),
+                0 0 0 1px rgba(16, 185, 129, 0.08),
+                inset 0 0 40px rgba(16, 185, 129, 0.03);
+        }}
+
+        @keyframes cardFadeUp {{
+            from {{
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }}
+            to {{
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }}
+        }}
+
+        /* Logo with pulse glow */
+        .logo-container {{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+        }}
+        .logo {{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(52, 211, 153, 0.25));
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            position: relative;
+            z-index: 2;
+        }}
+        .logo-glow {{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, transparent 70%);
+            border-radius: 22px;
+            animation: glowPulse 2.5s ease-in-out infinite;
+            z-index: 1;
+        }}
+        @keyframes glowPulse {{
+            0%, 100% {{
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }}
+            50% {{
+                transform: translate(-50%, -50%) scale(1.3);
+                opacity: 0.2;
+            }}
+        }}
+
+        h1 {{
+            text-align: center;
+            font-size: 38px;
+            font-weight: 900;
+            background: linear-gradient(180deg, #ffffff 0%, #6ee7b7 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }}
+        .sub {{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 13px;
+            margin-bottom: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }}
+
+        /* Enhanced tabs */
+        .tabs {{
+            display: flex;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.05);
+            border-radius: 50px;
+            padding: 5px;
+            margin-bottom: 28px;
+            position: relative;
+        }}
+        .tab {{
+            flex: 1;
+            padding: 13px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            border-radius: 50px;
+            font-size: 14px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            font-family: inherit;
+        }}
+        .tab.active {{
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            box-shadow: 
+                0 8px 25px rgba(16, 185, 129, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            transform: scale(1.02);
+        }}
+        .tab:hover:not(.active) {{
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(16, 185, 129, 0.08);
+        }}
+
+        /* Forms */
+        .form {{
+            display: none;
+            animation: fadeSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }}
+        .form.active {{
+            display: block;
+        }}
+        @keyframes fadeSlideIn {{
+            from {{
+                opacity: 0;
+                transform: translateX(-10px);
+            }}
+            to {{
+                opacity: 1;
+                transform: translateX(0);
+            }}
+        }}
+
+        /* Input fields with icons */
+        .input-group {{
+            position: relative;
+            margin-bottom: 12px;
+        }}
+        .input-group i {{
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(16, 185, 129, 0.4);
+            font-size: 15px;
+            transition: color 0.3s;
+            pointer-events: none;
+            z-index: 2;
+        }}
+        input {{
+            width: 100%;
+            padding: 16px 45px 16px 20px;
+            border-radius: 50px;
+            background: rgba(16, 185, 129, 0.04);
+            border: 1.5px solid rgba(16, 185, 129, 0.12);
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: inherit;
+        }}
+        input:focus {{
+            border-color: rgba(16, 185, 129, 0.6);
+            box-shadow: 
+                0 0 25px rgba(16, 185, 129, 0.1),
+                0 0 0 3px rgba(16, 185, 129, 0.05);
+            background: rgba(16, 185, 129, 0.08);
+        }}
+        input:focus + i,
+        .input-group:focus-within i {{
+            color: rgba(16, 185, 129, 0.8);
+        }}
+        input::placeholder {{
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 13px;
+        }}
+
+        /* Primary button */
+        .btn-primary {{
+            width: 100%;
+            padding: 16px;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 
+                0 10px 30px rgba(16, 185, 129, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            position: relative;
+            overflow: hidden;
+            font-family: inherit;
+        }}
+        .btn-primary::before {{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.5s;
+        }}
+        .btn-primary:hover {{
+            transform: translateY(-3px);
+            box-shadow: 
+                0 20px 45px rgba(16, 185, 129, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+        }}
+        .btn-primary:hover::before {{
+            left: 100%;
+        }}
+        .btn-primary:active {{
+            transform: scale(0.96);
+            transition: transform 0.1s;
+        }}
+        .btn-primary:disabled {{
+            opacity: 0.6;
+            pointer-events: none;
+            filter: grayscale(30%);
+        }}
+
+        /* Divider */
+        .divider {{
+            display: flex;
+            align-items: center;
+            margin: 22px 0;
+            gap: 12px;
+        }}
+        .divider::before,
+        .divider::after {{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent);
+        }}
+        .divider span {{
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }}
+
+        /* Google button - Modern design */
+        .btn-google {{
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            font-family: inherit;
+        }}
+        .btn-google:hover {{
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }}
+        .btn-google:active {{
+            transform: scale(0.97);
+        }}
+        .btn-google img {{
+            width: 20px;
+            height: 20px;
+        }}
+
+        /* Messages */
+        .msg {{
+            text-align: center;
+            color: #fca5a5;
+            font-size: 13px;
+            margin-top: 14px;
+            min-height: 20px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }}
+        .msg.success {{
+            color: #4ade80;
+        }}
+
+        /* Loading spinner */
+        .spinner {{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            vertical-align: middle;
+        }}
+        @keyframes spin {{
+            to {{ transform: rotate(360deg); }}
+        }}
+
+        /* Ripple effect */
+        .ripple {{
+            position: relative;
+            overflow: hidden;
+        }}
+        .ripple::after {{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }}
+        .ripple:active::after {{
+            width: 300px;
+            height: 300px;
+        }}
+
+        /* Responsive */
+        @media (max-width: 480px) {{
+            .card {{
+                padding: 30px 20px;
+                border-radius: 28px;
+            }}
+            h1 {{
+                font-size: 30px;
+            }}
+            .logo-container {{
+                width: 65px;
+                height: 65px;
+            }}
+            .logo {{
+                font-size: 34px;
+                border-radius: 18px;
+            }}
+            .logo-glow {{
+                border-radius: 18px;
+            }}
+        }}
     </style>
 </head>
 <body>
-    <div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div>
+    <!-- Floating orbs -->
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
 
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Card -->
     <div class="card">
-        <div class="logo">💖</div>
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <div class="logo">💎</div>
+        </div>
         <h1>MNAENCA</h1>
-        <p class="sub">Pink Rose Gold Luxury 2026 ✨</p>
+        <p class="sub">✦ Emerald Luxury 2026 ✦</p>
 
+        <!-- Tabs -->
         <div class="tabs">
-            <button class="tab active" id="tabLogin" onclick="switchTab('login')"><i class="fas fa-sign-in-alt"></i> دخول</button>
-            <button class="tab" id="tabRegister" onclick="switchTab('register')"><i class="fas fa-user-plus"></i> اشتراك</button>
+            <button class="tab active" id="tabLogin" onclick="switchTab('login')">
+                <i class="fas fa-sign-in-alt"></i> دخول
+            </button>
+            <button class="tab" id="tabRegister" onclick="switchTab('register')">
+                <i class="fas fa-user-plus"></i> اشتراك
+            </button>
         </div>
 
+        <!-- Login Form -->
         <div id="formLogin" class="form active">
-            <input type="email" id="loginEmail" placeholder="📧 البريد الإلكتروني" autocomplete="email" dir="ltr">
-            <input type="password" id="loginPass" placeholder="🔒 كلمة المرور" autocomplete="current-password">
-            <button id="btnLogin" onclick="doLogin()"><i class="fas fa-arrow-right-to-bracket"></i> تسجيل الدخول</button>
+            <div class="input-group">
+                <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" autocomplete="email" dir="ltr">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPass" placeholder="كلمة المرور" autocomplete="current-password">
+                <i class="fas fa-lock"></i>
+            </div>
+            <button class="btn-primary ripple" id="btnLogin" onclick="doLogin()">
+                <i class="fas fa-arrow-right-to-bracket"></i> تسجيل الدخول
+            </button>
+            <div class="divider">
+                <span>أو سجل دخولك بـ</span>
+            </div>
+            <button class="btn-google" id="btnGoogleLogin" onclick="doGoogleLogin()">
+                <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20" style="border-radius:50%;">
+                متابعة باستخدام Google
+            </button>
+            <div class="divider">
+                <span>أو سجل دخولك بـ</span>
+            </div>
+            <button class="btn-google" id="btnGoogleRegister" onclick="doGoogleRegister()">
+                <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20" style="border-radius:50%;">
+                متابعة باستخدام Google
+            </button>
             <div class="msg" id="loginMsg"></div>
         </div>
 
+        <!-- Register Form -->
         <div id="formRegister" class="form">
-            <input type="text" id="regName" placeholder="👤 اسم المستخدم" autocomplete="username">
-            <input type="email" id="regEmail" placeholder="📧 البريد الإلكتروني" autocomplete="email" dir="ltr">
-            <input type="password" id="regPass" placeholder="🔒 كلمة المرور (6 أحرف على الأقل)" autocomplete="new-password">
-            <button id="btnRegister" onclick="doRegister()"><i class="fas fa-heart"></i> إنشاء حساب</button>
+            <div class="input-group">
+                <input type="text" id="regName" placeholder="اسم المستخدم" autocomplete="username">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="email" id="regEmail" placeholder="البريد الإلكتروني" autocomplete="email" dir="ltr">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" id="regPass" placeholder="كلمة المرور (6 أحرف على الأقل)" autocomplete="new-password">
+                <i class="fas fa-key"></i>
+            </div>
+            <button class="btn-primary ripple" id="btnRegister" onclick="doRegister()">
+                <i class="fas fa-heart"></i> إنشاء حساب
+            </button>
             <div class="msg" id="regMsg"></div>
         </div>
     </div>
 
     <script src="firebase-config.js"></script>
     <script>
-        function switchTab(type){{
-            document.getElementById('tabLogin').classList.remove('active');
-            document.getElementById('tabRegister').classList.remove('active');
-            document.getElementById('formLogin').classList.remove('active');
-            document.getElementById('formRegister').classList.remove('active');
+        // Initialize Firebase (يجب أن يكون موجوداً في firebase-config.js)
+        // firebase.initializeApp(firebaseConfig);
+        // const auth = firebase.auth();
+        // const db = firebase.database();
+
+        // Create particles
+        (function createParticles() {{
+            const container = document.getElementById('particles');
+            if (!container) return;
+            const count = 25;
+            for (let i = 0; i < count; i++) {{
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = Math.random() * 8 + 6 + 's';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                container.appendChild(particle);
+            }}
+        }})();
+
+        // Tab switching
+        function switchTab(type) {{
+            const tabLogin = document.getElementById('tabLogin');
+            const tabRegister = document.getElementById('tabRegister');
+            const formLogin = document.getElementById('formLogin');
+            const formRegister = document.getElementById('formRegister');
+            const btnGoogleLogin = document.getElementById('btnGoogleLogin');
+            const btnGoogleRegister = document.getElementById('btnGoogleRegister');
+            
             document.getElementById('loginMsg').innerText = '';
             document.getElementById('regMsg').innerText = '';
-            if(type === 'login'){{
-                document.getElementById('tabLogin').classList.add('active');
-                document.getElementById('formLogin').classList.add('active');
+            document.getElementById('loginMsg').className = 'msg';
+            document.getElementById('regMsg').className = 'msg';
+            
+            if (type === 'login') {{
+                tabLogin.classList.add('active');
+                tabRegister.classList.remove('active');
+                formLogin.classList.add('active');
+                formRegister.classList.remove('active');
+                if (btnGoogleLogin) btnGoogleLogin.style.display = 'flex';
+                if (btnGoogleRegister) btnGoogleRegister.style.display = 'flex';
             }} else {{
-                document.getElementById('tabRegister').classList.add('active');
-                document.getElementById('formRegister').classList.add('active');
+                tabRegister.classList.add('active');
+                tabLogin.classList.remove('active');
+                formRegister.classList.add('active');
+                formLogin.classList.remove('active');
+                if (btnGoogleLogin) btnGoogleLogin.style.display = 'none';
+                if (btnGoogleRegister) btnGoogleRegister.style.display = 'none';
             }}
         }}
 
-        async function doLogin(){{
+        // Login with Email/Password
+        async function doLogin() {{
             const email = document.getElementById('loginEmail').value.trim();
             const password = document.getElementById('loginPass').value;
             const msg = document.getElementById('loginMsg');
             const btn = document.getElementById('btnLogin');
-            if(!email || !password){{ msg.innerText = '❌ الرجاء ملء جميع الحقول'; return; }}
-            btn.disabled = true; btn.innerHTML = '⏳ جاري الدخول...'; msg.innerText = ''; msg.className = 'msg';
+            
+            if (!email || !password) {{
+                msg.innerText = '❌ الرجاء ملء جميع الحقول';
+                msg.className = 'msg';
+                shakeElement(document.getElementById('loginEmail').parentElement);
+                return;
+            }}
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> جاري الدخول...';
+            msg.innerText = '';
+            msg.className = 'msg';
+            
             try {{
                 await auth.signInWithEmailAndPassword(email, password);
                 window.location.replace('index.html');
-            }} catch(error) {{
-                btn.disabled = false; btn.innerHTML = '<i class="fas fa-arrow-right-to-bracket"></i> تسجيل الدخول';
-                switch(error.code) {{
-                    case 'auth/user-not-found': msg.innerText = '❌ لا يوجد حساب بهذا البريد'; break;
-                    case 'auth/wrong-password': case 'auth/invalid-credential': msg.innerText = '❌ كلمة المرور غير صحيحة'; break;
-                    case 'auth/invalid-email': msg.innerText = '❌ بريد إلكتروني غير صالح'; break;
-                    case 'auth/too-many-requests': msg.innerText = '❌ محاولات كثيرة، حاول لاحقاً'; break;
-                    default: msg.innerText = '❌ خطأ: ' + error.message;
+            }} catch (error) {{
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-arrow-right-to-bracket"></i> تسجيل الدخول';
+                
+                let errorMsg = '❌ حدث خطأ غير متوقع';
+                switch (error.code) {{
+                    case 'auth/user-not-found':
+                        errorMsg = '❌ لا يوجد حساب بهذا البريد الإلكتروني';
+                        break;
+                    case 'auth/wrong-password':
+                    case 'auth/invalid-credential':
+                        errorMsg = '❌ كلمة المرور غير صحيحة';
+                        break;
+                    case 'auth/invalid-email':
+                        errorMsg = '❌ صيغة البريد الإلكتروني غير صالحة';
+                        break;
+                    case 'auth/too-many-requests':
+                        errorMsg = '❌ محاولات كثيرة، الرجاء المحاولة لاحقاً';
+                        break;
+                    case 'auth/user-disabled':
+                        errorMsg = '❌ تم تعطيل هذا الحساب';
+                        break;
+                    default:
+                        errorMsg = '❌ خطأ: ' + (error.message || 'غير معروف');
                 }}
+                msg.innerText = errorMsg;
+                msg.className = 'msg';
             }}
         }}
 
-        async function doRegister(){{
+        // Register with Email/Password
+        async function doRegister() {{
             const username = document.getElementById('regName').value.trim();
             const email = document.getElementById('regEmail').value.trim();
             const password = document.getElementById('regPass').value;
             const msg = document.getElementById('regMsg');
             const btn = document.getElementById('btnRegister');
-            if(!username || !email || !password){{ msg.innerText = '❌ الرجاء ملء جميع الحقول'; return; }}
-            if(username.length < 3){{ msg.innerText = '❌ اسم المستخدم 3 أحرف على الأقل'; return; }}
-            if(password.length < 6){{ msg.innerText = '❌ كلمة المرور 6 أحرف على الأقل'; return; }}
-            if(!email.includes('@') || !email.includes('.')){{ msg.innerText = '❌ بريد إلكتروني غير صالح'; return; }}
-            btn.disabled = true; btn.innerHTML = '⏳ جاري إنشاء الحساب...'; msg.innerText = ''; msg.className = 'msg';
+            
+            // Validation
+            if (!username || !email || !password) {{
+                msg.innerText = '❌ الرجاء ملء جميع الحقول';
+                msg.className = 'msg';
+                return;
+            }}
+            if (username.length < 3) {{
+                msg.innerText = '❌ اسم المستخدم يجب أن يكون 3 أحرف على الأقل';
+                msg.className = 'msg';
+                return;
+            }}
+            if (password.length < 6) {{
+                msg.innerText = '❌ كلمة المرور يجب أن تكون 6 أحرف على الأقل';
+                msg.className = 'msg';
+                return;
+            }}
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {{
+                msg.innerText = '❌ صيغة البريد الإلكتروني غير صالحة';
+                msg.className = 'msg';
+                return;
+            }}
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> جاري إنشاء الحساب...';
+            msg.innerText = '';
+            msg.className = 'msg';
+            
             try {{
                 const userCredential = await auth.createUserWithEmailAndPassword(email, password);
                 const uid = userCredential.user.uid;
+                
+                // إنشاء بيانات المستخدم
                 const avatarUrl = DICEBEAR_URL + '?seed=' + uid;
                 const coverColor = COVER_COLORS[Math.floor(Math.random() * COVER_COLORS.length)];
+                
                 const userData = {{
-                    username: username, email: email, bio: '',
-                    website: '', location: '', contactEmail: '',
-                    avatarUrl: avatarUrl, hasCustomAvatar: false,
-                    coverImageUrl: '', hasCustomCover: false,
-                    coverColor: coverColor, followers: {{}}, following: {{}},
-                    totalLikes: 0, totalPosts: 0, isVerified: false, verifiedAt: null, verifiedBy: null,
-                    banned: false, createdAt: Date.now(), lastSeen: Date.now()
+                    username: username,
+                    email: email,
+                    bio: '',
+                    website: '',
+                    location: '',
+                    contactEmail: '',
+                    avatarUrl: avatarUrl,
+                    hasCustomAvatar: false,
+                    coverImageUrl: '',
+                    hasCustomCover: false,
+                    coverColor: coverColor,
+                    followers: {{}},
+                    following: {{}},
+                    totalLikes: 0,
+                    totalPosts: 0,
+                    isVerified: false,
+                    verifiedAt: null,
+                    verifiedBy: null,
+                    banned: false,
+                    createdAt: Date.now(),
+                    lastSeen: Date.now(),
+                    authProvider: 'email'
                 }};
+                
                 await db.ref('users/' + uid).set(userData);
+                
                 msg.innerText = '✅ تم إنشاء الحساب بنجاح! جاري التوجيه...';
                 msg.className = 'msg success';
-                setTimeout(() => {{ window.location.replace('index.html'); }}, 800);
-            }} catch(error) {{
-                btn.disabled = false; btn.innerHTML = '<i class="fas fa-heart"></i> إنشاء حساب'; msg.className = 'msg';
-                switch(error.code) {{
-                    case 'auth/email-already-in-use': msg.innerText = '❌ البريد الإلكتروني مستخدم بالفعل'; break;
-                    case 'auth/weak-password': msg.innerText = '❌ كلمة المرور ضعيفة جداً'; break;
-                    case 'auth/invalid-email': msg.innerText = '❌ بريد إلكتروني غير صالح'; break;
-                    case 'auth/operation-not-allowed': msg.innerText = '❌ التسجيل غير مفعل، راجع إعدادات Firebase'; break;
-                    default: msg.innerText = '❌ خطأ: ' + (error.message || 'غير معروف');
+                
+                setTimeout(() => {{
+                    window.location.replace('index.html');
+                }}, 1000);
+            }} catch (error) {{
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-heart"></i> إنشاء حساب';
+                
+                let errorMsg = '❌ حدث خطأ غير متوقع';
+                switch (error.code) {{
+                    case 'auth/email-already-in-use':
+                        errorMsg = '❌ البريد الإلكتروني مستخدم بالفعل';
+                        break;
+                    case 'auth/weak-password':
+                        errorMsg = '❌ كلمة المرور ضعيفة جداً';
+                        break;
+                    case 'auth/invalid-email':
+                        errorMsg = '❌ صيغة البريد الإلكتروني غير صالحة';
+                        break;
+                    case 'auth/operation-not-allowed':
+                        errorMsg = '❌ التسجيل غير مفعل، راجع إعدادات Firebase';
+                        break;
+                    default:
+                        errorMsg = '❌ خطأ: ' + (error.message || 'غير معروف');
                 }}
+                msg.innerText = errorMsg;
+                msg.className = 'msg';
             }}
         }}
 
+        // Google Sign-In/Up
+        async function doGoogleLogin() {{
+            const provider = new firebase.auth.GoogleAuthProvider();
+            provider.setCustomParameters({{
+                prompt: 'select_account'
+            }});
+            await handleGoogleAuth(provider, 'login');
+        }}
+
+        async function doGoogleRegister() {{
+            const provider = new firebase.auth.GoogleAuthProvider();
+            provider.setCustomParameters({{
+                prompt: 'select_account'
+            }});
+            await handleGoogleAuth(provider, 'register');
+        }}
+
+        async function handleGoogleAuth(provider, type) {{
+            const msg = document.getElementById(type === 'login' ? 'loginMsg' : 'regMsg');
+            const btn = document.getElementById(type === 'login' ? 'btnGoogleLogin' : 'btnGoogleRegister');
+            
+            msg.innerText = '';
+            msg.className = 'msg';
+            
+            if (btn) {{
+                btn.disabled = true;
+                btn.innerHTML = '<span class="spinner"></span> جاري المصادقة...';
+            }}
+            
+            try {{
+                const result = await auth.signInWithPopup(provider);
+                const user = result.user;
+                const isNewUser = result.additionalUserInfo?.isNewUser;
+                
+                // إذا كان مستخدماً جديداً، أنشئ بياناته
+                if (isNewUser || type === 'register') {{
+                    const uid = user.uid;
+                    const userRef = db.ref('users/' + uid);
+                    const snapshot = await userRef.once('value');
+                    
+                    if (!snapshot.exists()) {{
+                        const avatarUrl = user.photoURL || (DICEBEAR_URL + '?seed=' + uid);
+                        const coverColor = COVER_COLORS[Math.floor(Math.random() * COVER_COLORS.length)];
+                        const displayName = user.displayName || 'مستخدم ' + uid.substring(0, 6);
+                        
+                        const userData = {{
+                            username: displayName,
+                            email: user.email,
+                            bio: '',
+                            website: '',
+                            location: '',
+                            contactEmail: user.email,
+                            avatarUrl: avatarUrl,
+                            hasCustomAvatar: !!user.photoURL,
+                            coverImageUrl: '',
+                            hasCustomCover: false,
+                            coverColor: coverColor,
+                            followers: {{}},
+                            following: {{}},
+                            totalLikes: 0,
+                            totalPosts: 0,
+                            isVerified: user.emailVerified || false,
+                            verifiedAt: user.emailVerified ? Date.now() : null,
+                            verifiedBy: user.emailVerified ? 'google' : null,
+                            banned: false,
+                            createdAt: Date.now(),
+                            lastSeen: Date.now(),
+                            authProvider: 'google'
+                        }};
+                        
+                        await userRef.set(userData);
+                    }}
+                }}
+                
+                msg.innerText = '✅ تم تسجيل الدخول بنجاح! جاري التوجيه...';
+                msg.className = 'msg success';
+                
+                setTimeout(() => {{
+                    window.location.replace('index.html');
+                }}, 800);
+            }} catch (error) {{
+                if (btn) {{
+                    btn.disabled = false;
+                    btn.innerHTML = '<img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20" style="border-radius:50%;"> متابعة باستخدام Google';
+                }}
+                
+                let errorMsg = '❌ حدث خطأ غير متوقع';
+                switch (error.code) {{
+                    case 'auth/popup-closed-by-user':
+                        errorMsg = '❌ تم إغلاق نافذة تسجيل الدخول';
+                        break;
+                    case 'auth/popup-blocked':
+                        errorMsg = '❌ تم حظر النافذة المنبثقة، الرجاء السماح بها';
+                        break;
+                    case 'auth/cancelled-popup-request':
+                        errorMsg = '❌ تم إلغاء الطلب';
+                        break;
+                    case 'auth/account-exists-with-different-credential':
+                        errorMsg = '❌ يوجد حساب مسجل بنفس البريد الإلكتروني بطريقة مختلفة';
+                        break;
+                    case 'auth/network-request-failed':
+                        errorMsg = '❌ فشل الاتصال بالشبكة';
+                        break;
+                    default:
+                        errorMsg = '❌ خطأ: ' + (error.message || 'غير معروف');
+                }}
+                msg.innerText = errorMsg;
+                msg.className = 'msg';
+                
+                console.error('Google Auth Error:', error);
+            }}
+        }}
+
+        // Shake animation for invalid input
+        function shakeElement(element) {{
+            if (!element) return;
+            element.style.animation = 'shake 0.5s ease';
+            setTimeout(() => {{
+                element.style.animation = '';
+            }}, 500);
+        }}
+
+        // Add shake keyframes dynamically
+        const shakeStyle = document.createElement('style');
+        shakeStyle.textContent = `
+            @keyframes shake {{
+                0%, 100% {{ transform: translateX(0); }}
+                10%, 30%, 50%, 70%, 90% {{ transform: translateX(-5px); }}
+                20%, 40%, 60%, 80% {{ transform: translateX(5px); }}
+            }}
+        `;
+        document.head.appendChild(shakeStyle);
+
+        // Enter key handler
         document.querySelectorAll('input').forEach(input => {{
             input.addEventListener('keydown', function(e) {{
-                if(e.key === 'Enter') {{
+                if (e.key === 'Enter') {{
                     e.preventDefault();
-                    if(document.getElementById('formLogin').classList.contains('active')) {{ doLogin(); }}
-                    else {{ doRegister(); }}
+                    if (document.getElementById('formLogin').classList.contains('active')) {{
+                        doLogin();
+                    }} else {{
+                        doRegister();
+                    }}
                 }}
             }});
         }});
 
-        auth.onAuthStateChanged(user => {{
-            if(user) {{ window.location.replace('index.html'); }}
-        }});
+        // Auto-redirect if already logged in
+        if (typeof auth !== 'undefined') {{
+            auth.onAuthStateChanged(user => {{
+                if (user) {{
+                    window.location.replace('index.html');
+                }}
+            }});
+        }}
 
-        console.log('💖 MNAENCA Auth Ready');
+        console.log('💎 MNAENCA Auth v2.0 Ready | Firebase v10.12.0 | Google Auth Enabled');
     </script>
 </body>
 </html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 3. index.html - الرئيسية (فيديو طبيعي + نص أسفل الفيديو)
+# 💎 3. index.html - الرئيسية (فيديو طبيعي + نص أسفل الفيديو)
 # ═══════════════════════════════════════════════════════════
 
 def build_index():
@@ -489,7 +1243,7 @@ def build_index():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>💖 MNAENCA | الرئيسية</title>
+    <title>💎 MNAENCA | الرئيسية</title>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
@@ -499,13 +1253,13 @@ def build_index():
         
         #loaderScreen{{
             position:fixed;inset:0;z-index:9999;
-            background:radial-gradient(ellipse at top, #1a0a14, #140511, #0a0208);
+            background:radial-gradient(ellipse at top, #0f172a, #05140b, #020617);
             display:flex;align-items:center;justify-content:center;
             flex-direction:column;gap:16px;
         }}
         .spinner-big{{
             width:50px;height:50px;
-            border:4px solid rgba(236,72,153,0.2);
+            border:4px solid rgba(16,185,129,0.2);
             border-top-color:var(--accent);
             border-radius:50%;
             animation:spin 0.8s linear infinite;
@@ -515,11 +1269,11 @@ def build_index():
             position:fixed;top:10px;left:10px;right:10px;z-index:100;
             display:flex;justify-content:space-between;align-items:center;
             padding:8px 16px;
-            background:rgba(20,5,17,0.7);
+            background:rgba(5,20,11,0.7);
             backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);
             border:1px solid var(--border);
             border-radius:50px;
-            box-shadow:0 8px 32px rgba(236,72,153,0.08);
+            box-shadow:0 8px 32px rgba(16,185,129,0.08);
         }}
         .logo-icon{{
             width:34px;height:34px;
@@ -530,7 +1284,7 @@ def build_index():
         }}
         .logo-text{{
             font-weight:800;font-size:17px;
-            background:linear-gradient(to bottom,#fff,#fbcfe8);
+            background:linear-gradient(to bottom,#fff,#a7f3d0);
             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
             margin-left:8px;
         }}
@@ -540,7 +1294,7 @@ def build_index():
             padding:7px 16px;cursor:pointer;border-radius:25px;
             font-size:13px;font-weight:500;transition:all 0.3s;
         }}
-        .tab.active{{background:rgba(236,72,153,0.25);color:#fff}}
+        .tab.active{{background:rgba(16,185,129,0.25);color:#fff}}
         .top-icons{{display:flex;gap:16px}}
         .top-icon{{
             background:none;border:none;color:rgba(255,255,255,0.7);
@@ -609,31 +1363,31 @@ def build_index():
         .author-avatar{{
             width:40px;height:40px;border-radius:50%;overflow:hidden;
             cursor:pointer;position:relative;
-            background:linear-gradient(135deg, #ec4899, #f472b6, #fbcfe8);
+            background:linear-gradient(135deg, #10b981, #34d399, #a7f3d0);
             padding:2px;flex-shrink:0;
             animation:storyRing 3s ease-in-out infinite;
         }}
-        @keyframes storyRing{{0%,100%{{box-shadow:0 0 15px rgba(236,72,153,0.4)}}50%{{box-shadow:0 0 25px rgba(244,114,182,0.8)}}}}
+        @keyframes storyRing{{0%,100%{{box-shadow:0 0 15px rgba(16,185,129,0.4)}}50%{{box-shadow:0 0 25px rgba(52,211,153,0.8)}}}}
         .author-avatar img{{width:100%;height:100%;object-fit:cover;border-radius:50%;border:2px solid var(--bg)}}
         .author-name{{
             font-weight:700;font-size:14px;cursor:pointer;
             display:flex;align-items:center;gap:6px;flex-wrap:wrap;
         }}
         .verified-badge-main{{
-            background:linear-gradient(135deg, #ec4899, #f472b6);
+            background:linear-gradient(135deg, #10b981, #34d399);
             color:#fff;font-size:9px;padding:1px 4px;border-radius:50%;
             display:inline-flex;align-items:center;justify-content:center;
             width:16px;height:16px;font-weight:bold;
-            box-shadow:0 0 12px rgba(251,207,232,0.6);
+            box-shadow:0 0 12px rgba(167,243,208,0.6);
         }}
         .btn-follow{{
             background:linear-gradient(135deg,var(--accent),var(--accent2));
             padding:4px 12px;border-radius:20px;font-size:10px;
             font-weight:700;border:none;color:#fff;cursor:pointer;
-            box-shadow:0 4px 15px rgba(236,72,153,0.4);
+            box-shadow:0 4px 15px rgba(16,185,129,0.4);
             transition:all 0.3s;white-space:nowrap;
         }}
-        .btn-follow:hover{{box-shadow:0 8px 25px rgba(236,72,153,0.7);}}
+        .btn-follow:hover{{box-shadow:0 8px 25px rgba(16,185,129,0.7);}}
         .caption{{font-size:13px;margin-bottom:4px;line-height:1.4;opacity:0.9}}
         .tag{{color:var(--accent2);cursor:pointer;font-weight:500}}
         .music{{font-size:11px;opacity:0.7;display:flex;align-items:center;gap:6px;cursor:pointer;margin-top:4px}}
@@ -645,6 +1399,19 @@ def build_index():
         .music-wave span:nth-child(4){{height:10px;animation-delay:0.45s}}
         .music-wave span:nth-child(5){{height:3px;animation-delay:0.6s}}
         @keyframes musicWave{{0%,100%{{transform:scaleY(1)}}50%{{transform:scaleY(1.8)}}}}
+
+        /* 💧 Watermark */
+        .watermark-overlay{{
+            position:absolute;top:20px;right:20px;
+            z-index:15;pointer-events:none;
+            display:flex;align-items:center;gap:6px;
+            opacity:0.5;
+        }}
+        .watermark-overlay span{{
+            font-weight:700;font-size:12px;
+            text-shadow:0 2px 8px rgba(0,0,0,0.6);
+            color:#fff;
+        }}
 
         .side-btns{{
             position:absolute;right:12px;bottom:140px;
@@ -664,7 +1431,7 @@ def build_index():
         /* 📤 Share Panel */
         .share-panel{{
             position:fixed;bottom:0;left:0;right:0;
-            background:rgba(20,5,17,0.98);
+            background:rgba(5,20,11,0.98);
             backdrop-filter:blur(40px);
             border-top:2px solid var(--accent);
             border-radius:24px 24px 0 0;
@@ -691,7 +1458,7 @@ def build_index():
         /* 💬 TikTok Style Comments */
         .comments-panel{{
             position:fixed;bottom:0;left:0;right:0;
-            background:rgba(20,5,17,0.98);
+            background:rgba(5,20,11,0.98);
             backdrop-filter:blur(40px);
             border-top:2px solid var(--accent);
             border-radius:24px 24px 0 0;
@@ -712,13 +1479,13 @@ def build_index():
         .comments-list{{flex:1;overflow-y:auto;padding:12px 16px;}}
         .comment-item{{
             display:flex;gap:10px;padding:12px 0;
-            border-bottom:1px solid rgba(236,72,153,0.06);
+            border-bottom:1px solid rgba(16,185,129,0.06);
             animation:fadeIn 0.3s ease;
         }}
         .comment-avatar{{
             width:36px;height:36px;border-radius:50%;
             overflow:hidden;flex-shrink:0;
-            border:2px solid rgba(236,72,153,0.2);
+            border:2px solid rgba(16,185,129,0.2);
         }}
         .comment-avatar img{{width:100%;height:100%;object-fit:cover}}
         .comment-body{{flex:1;min-width:0}}
@@ -728,17 +1495,17 @@ def build_index():
         .comment-actions span{{cursor:pointer;opacity:0.6;display:flex;align-items:center;gap:4px;transition:opacity 0.2s}}
         .comment-actions span:hover{{opacity:1}}
         .comment-time{{font-size:10px;opacity:0.4}}
-        .reply-item{{margin-right:46px;padding:8px 0;border-bottom:1px solid rgba(236,72,153,0.04);display:flex;gap:8px;}}
+        .reply-item{{margin-right:46px;padding:8px 0;border-bottom:1px solid rgba(16,185,129,0.04);display:flex;gap:8px;}}
         .reply-item .comment-avatar{{width:28px;height:28px}}
         .comment-input-row{{
             display:flex;gap:8px;padding:12px 16px;
             border-top:1px solid var(--border);
-            background:rgba(20,5,17,0.95);
+            background:rgba(5,20,11,0.95);
             flex-shrink:0;
         }}
         .comment-input-row input{{
             flex:1;padding:12px 16px;border-radius:30px;
-            background:rgba(236,72,153,0.04);border:1px solid var(--border);
+            background:rgba(16,185,129,0.04);border:1px solid var(--border);
             color:#fff;font-size:13px;outline:none;
         }}
         .comment-input-row button{{
@@ -759,24 +1526,24 @@ def build_index():
         .close-player{{
             position:absolute;top:20px;left:20px;
             background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);
-            border:1px solid rgba(236,72,153,0.4);color:#fff;
+            border:1px solid rgba(16,185,129,0.4);color:#fff;
             width:44px;height:44px;border-radius:50%;
             display:flex;align-items:center;justify-content:center;
             cursor:pointer;font-size:20px;z-index:10001;transition:all 0.3s;
         }}
-        .close-player:hover{{background:rgba(236,72,153,0.3);box-shadow:0 0 20px rgba(236,72,153,0.5)}}
+        .close-player:hover{{background:rgba(16,185,129,0.3);box-shadow:0 0 20px rgba(16,185,129,0.5)}}
 
         /* 📱 FLOATING BOTTOM NAV */
         .nav-bottom{{
             position:fixed;bottom:12px;left:12px;right:12px;
             display:flex;justify-content:space-around;align-items:center;
             padding:8px 0;
-            background:rgba(20,5,17,0.8);
+            background:rgba(5,20,11,0.8);
             backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);
             z-index:100;
             border:1px solid var(--border);
             border-radius:40px;
-            box-shadow:0 -8px 32px rgba(236,72,153,0.06);
+            box-shadow:0 -8px 32px rgba(16,185,129,0.06);
         }}
         .nav-item{{
             display:flex;flex-direction:column;align-items:center;gap:3px;
@@ -790,13 +1557,13 @@ def build_index():
             background:linear-gradient(135deg,var(--accent),var(--accent2));
             border-radius:50%;display:flex;align-items:center;justify-content:center;
             margin-top:-30px;cursor:pointer;
-            box-shadow:0 10px 30px rgba(236,72,153,0.6),0 0 40px rgba(236,72,153,0.2);
+            box-shadow:0 10px 30px rgba(16,185,129,0.6),0 0 40px rgba(16,185,129,0.2);
             border:none;color:#fff;font-size:20px;
             z-index:101;transition:all 0.3s;text-decoration:none;
         }}
-        .btn-add:hover{{transform:scale(1.1);box-shadow:0 15px 40px rgba(236,72,153,0.8)}}
+        .btn-add:hover{{transform:scale(1.1);box-shadow:0 15px 40px rgba(16,185,129,0.8)}}
 
-        /* ✨ RESPONSIVE */
+        /* ✨ RESPONSIVE: عرض أفقي للشاشات الكبيرة */
         @media screen and (min-width: 800px) {{
             .vid-card {{
                 flex-direction: row;
@@ -856,12 +1623,12 @@ def build_index():
 
 <div id="loaderScreen">
     <div class="spinner-big"></div>
-    <p style="color:rgba(255,255,255,0.5);font-size:15px">💖 MNAENCA جاري التحميل...</p>
+    <p style="color:rgba(255,255,255,0.5);font-size:15px">💎 MNAENCA جاري التحميل...</p>
 </div>
 
 <div id="mainApp">
     <div class="desktop-sidebar">
-        <div class="sidebar-logo"><div class="logo-icon">💖</div> MNAENCA</div>
+        <div class="sidebar-logo"><div class="logo-icon">💎</div> MNAENCA</div>
         <div class="sidebar-nav-item active" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> الرئيسية</div>
         <div class="sidebar-nav-item" onclick="openSearch()"><i class="fas fa-search"></i> بحث</div>
         <div class="sidebar-nav-item" onclick="openNotifs()"><i class="fas fa-bell"></i> الإشعارات</div>
@@ -876,7 +1643,7 @@ def build_index():
     <div style="flex: 1; display: flex; flex-direction: column; height: 100vh; position: relative; background: #000;">
         <div class="topbar">
             <div style="display:flex;align-items:center">
-                <div class="logo-icon">💖</div>
+                <div class="logo-icon">💎</div>
                 <span class="logo-text">MNAENCA</span>
             </div>
             <div class="tabs">
@@ -891,9 +1658,9 @@ def build_index():
 
         <div class="videos-wrap" id="videosWrap">
             <div style="display:flex;align-items:center;justify-content:center;height:100vh;color:rgba(255,255,255,0.5);flex-direction:column;gap:12px">
-                <i class="fas fa-video" style="font-size:48px;opacity:0.3;color:#ec4899"></i>
+                <i class="fas fa-video" style="font-size:48px;opacity:0.3;color:#10b981"></i>
                 <p>لا توجد فيديوهات بعد</p>
-                <p style="font-size:12px;opacity:0.5">ارفع أول فيديو! 💖</p>
+                <p style="font-size:12px;opacity:0.5">ارفع أول فيديو! 💎</p>
             </div>
         </div>
 
@@ -909,7 +1676,7 @@ def build_index():
                 <div class="share-item" onclick="shareTo('telegram')"><div class="share-icon" style="background:rgba(0,136,204,0.15);color:#0088cc"><i class="fab fa-telegram"></i></div><span>Telegram</span></div>
                 <div class="share-item" onclick="shareTo('facebook')"><div class="share-icon" style="background:rgba(24,119,242,0.15);color:#1877F2"><i class="fab fa-facebook"></i></div><span>Facebook</span></div>
                 <div class="share-item" onclick="shareTo('twitter')"><div class="share-icon" style="background:rgba(29,161,242,0.15);color:#1DA1F2"><i class="fab fa-twitter"></i></div><span>X</span></div>
-                <div class="share-item" onclick="shareTo('copy')"><div class="share-icon" style="background:rgba(236,72,153,0.15);color:#ec4899"><i class="fas fa-link"></i></div><span>نسخ الرابط</span></div>
+                <div class="share-item" onclick="shareTo('copy')"><div class="share-icon" style="background:rgba(16,185,129,0.15);color:#10b981"><i class="fas fa-link"></i></div><span>نسخ الرابط</span></div>
             </div>
         </div>
         <div class="overlay" id="shareOverlay" style="display:none;z-index:499" onclick="closeSharePanel()"></div>
@@ -979,7 +1746,7 @@ def build_index():
     }}
     function shareTo(platform) {{
         const url = encodeURIComponent(currentShareUrl);
-        const text = encodeURIComponent('شاهد هذا الفيديو على MNAENCA 💖');
+        const text = encodeURIComponent('شاهد هذا الفيديو على MNAENCA 💎');
         let shareUrl = '';
         switch(platform) {{
             case 'whatsapp': shareUrl = 'https://wa.me/?text=' + text + '%20' + url; break;
@@ -1106,7 +1873,7 @@ def build_index():
         if(!container) return;
         let filtered = currentFeed === 'forYou' ? allVideos : allVideos.filter(v => currentUserData?.following?.[v.sender]);
         if(!filtered.length) {{
-            container.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:rgba(255,255,255,0.5);flex-direction:column;gap:12px"><i class="fas fa-video" style="font-size:48px;opacity:0.3;color:#ec4899"></i><p>${{currentFeed === 'forYou' ? 'لا توجد فيديوهات بعد' : 'تابع مستخدمين لرؤية فيديوهاتهم'}}</p></div>`;
+            container.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:rgba(255,255,255,0.5);flex-direction:column;gap:12px"><i class="fas fa-video" style="font-size:48px;opacity:0.3;color:#10b981"></i><p>${{currentFeed === 'forYou' ? 'لا توجد فيديوهات بعد' : 'تابع مستخدمين لرؤية فيديوهاتهم'}}</p></div>`;
             return;
         }}
         container.innerHTML = '';
@@ -1123,6 +1890,7 @@ def build_index():
             const div = document.createElement('div');
             div.className = 'vid-card';
             div.innerHTML = `
+                <div class="watermark-overlay"><span>💎 MNAENCA</span></div>
                 <div class="video-container">
                     <video loop playsinline muted data-src="${{video.url}}" poster="${{video.thumbnail || ''}}"></video>
                 </div>
@@ -1209,10 +1977,10 @@ def build_index():
         const items = Object.values(ns).reverse();
         let notifHTML = '';
         if(!items.length) {{
-            notifHTML = '<div style="text-align:center;opacity:0.5;padding:40px"><i class="fas fa-bell" style="font-size:48px;color:#ec4899;margin-bottom:12px;display:block"></i><p>لا توجد إشعارات</p></div>';
+            notifHTML = '<div style="text-align:center;opacity:0.5;padding:40px"><i class="fas fa-bell" style="font-size:48px;color:#10b981;margin-bottom:12px;display:block"></i><p>لا توجد إشعارات</p></div>';
         }} else {{
             items.forEach(n => {{
-                notifHTML += `<div style="display:flex;gap:12px;padding:14px;border-bottom:1px solid rgba(236,72,153,0.1);align-items:center;animation:fadeIn 0.3s ease"><div style="width:40px;height:40px;border-radius:50%;background:rgba(236,72,153,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;color:#ec4899"><i class="fas fa-bell"></i></div><div><div style="font-weight:600">${{n.from || 'مستخدم'}}</div><div style="font-size:12px;opacity:0.6;margin-top:2px">${{n.msg || ''}}</div><div style="font-size:10px;opacity:0.3;margin-top:4px">${{new Date(n.timestamp).toLocaleString('ar-SA')}}</div></div></div>`;
+                notifHTML += `<div style="display:flex;gap:12px;padding:14px;border-bottom:1px solid rgba(16,185,129,0.1);align-items:center;animation:fadeIn 0.3s ease"><div style="width:40px;height:40px;border-radius:50%;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;color:#10b981"><i class="fas fa-bell"></i></div><div><div style="font-weight:600">${{n.from || 'مستخدم'}}</div><div style="font-size:12px;opacity:0.6;margin-top:2px">${{n.msg || ''}}</div><div style="font-size:10px;opacity:0.3;margin-top:4px">${{new Date(n.timestamp).toLocaleString('ar-SA')}}</div></div></div>`;
             }});
         }}
         await db.ref('notifications/' + currentUser.uid).remove();
@@ -1222,14 +1990,14 @@ def build_index():
     }}
 
     function openSearch() {{
-        showOverlay('🔍 بحث', `<input type="text" id="searchQ" onkeyup="doSearch()" placeholder="ابحث عن مستخدمين، فيديوهات..." style="width:100%;padding:14px;border-radius:30px;background:rgba(236,72,153,0.04);border:1px solid rgba(236,72,153,0.15);color:#fff;font-size:14px;outline:none;margin-bottom:16px"><div id="searchR"></div>`);
+        showOverlay('🔍 بحث', `<input type="text" id="searchQ" onkeyup="doSearch()" placeholder="ابحث عن مستخدمين، فيديوهات..." style="width:100%;padding:14px;border-radius:30px;background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.15);color:#fff;font-size:14px;outline:none;margin-bottom:16px"><div id="searchR"></div>`);
         window.doSearch = function() {{
             const query = document.getElementById('searchQ').value.toLowerCase();
             const resultsDiv = document.getElementById('searchR');
             if(!query) {{ resultsDiv.innerHTML = ''; return; }}
             const users = Object.values(allUsers).filter(u => u.username?.toLowerCase().includes(query));
             const vids = allVideos.filter(v => (v.description || '').toLowerCase().includes(query));
-            resultsDiv.innerHTML = `${{users.length ? `<div style="margin-bottom:16px"><h4 style="font-size:12px;opacity:0.5;margin-bottom:8px"><i class="fas fa-users"></i> مستخدمين</h4>${{users.map(u => `<div onclick="openUserProfile('${{u.uid || Object.keys(allUsers).find(k=>allUsers[k]===u)}}')" style="display:flex;align-items:center;gap:10px;padding:10px;cursor:pointer;border-bottom:1px solid rgba(236,72,153,0.1)"><img src="${{u.avatarUrl || (DICEBEAR_URL + '?seed=' + (u.uid || u.username))}}" style="width:40px;height:40px;border-radius:50%"><div>@${{u.username}} ${{u.isVerified ? '<span class="verified-badge-main"><i class="fas fa-check"></i></span>' : ''}}</div></div>`).join('')}}</div>` : ''}}${{vids.length ? `<div><h4 style="font-size:12px;opacity:0.5;margin-bottom:8px"><i class="fas fa-video"></i> فيديوهات</h4>${{vids.map(v => `<div onclick="openPlayer('${{v.url}}', 'video.mp4')" style="display:flex;align-items:center;gap:10px;padding:10px;cursor:pointer;border-bottom:1px solid rgba(236,72,153,0.1)"><i class="fas fa-play-circle" style="color:#ec4899;font-size:20px"></i><span style="font-size:13px">${{(v.description || 'فيديو').substring(0, 40)}}</span></div>`).join('')}}</div>` : ''}}${{!users.length && !vids.length ? '<div style="text-align:center;opacity:0.5;padding:30px">لا توجد نتائج</div>' : ''}}`;
+            resultsDiv.innerHTML = `${{users.length ? `<div style="margin-bottom:16px"><h4 style="font-size:12px;opacity:0.5;margin-bottom:8px"><i class="fas fa-users"></i> مستخدمين</h4>${{users.map(u => `<div onclick="openUserProfile('${{u.uid || Object.keys(allUsers).find(k=>allUsers[k]===u)}}')" style="display:flex;align-items:center;gap:10px;padding:10px;cursor:pointer;border-bottom:1px solid rgba(16,185,129,0.1)"><img src="${{u.avatarUrl || (DICEBEAR_URL + '?seed=' + (u.uid || u.username))}}" style="width:40px;height:40px;border-radius:50%"><div>@${{u.username}} ${{u.isVerified ? '<span class="verified-badge-main"><i class="fas fa-check"></i></span>' : ''}}</div></div>`).join('')}}</div>` : ''}}${{vids.length ? `<div><h4 style="font-size:12px;opacity:0.5;margin-bottom:8px"><i class="fas fa-video"></i> فيديوهات</h4>${{vids.map(v => `<div onclick="openPlayer('${{v.url}}', 'video.mp4')" style="display:flex;align-items:center;gap:10px;padding:10px;cursor:pointer;border-bottom:1px solid rgba(16,185,129,0.1)"><i class="fas fa-play-circle" style="color:#10b981;font-size:20px"></i><span style="font-size:13px">${{(v.description || 'فيديو').substring(0, 40)}}</span></div>`).join('')}}</div>` : ''}}${{!users.length && !vids.length ? '<div style="text-align:center;opacity:0.5;padding:30px">لا توجد نتائج</div>' : ''}}`;
         }};
         setTimeout(() => {{ const input = document.getElementById('searchQ'); if(input) input.focus(); }}, 300);
     }}
@@ -1270,278 +2038,13 @@ def build_index():
     window.toggleFollow = toggleFollow;
     window.toggleLike = toggleLike;
 
-    console.log('💖 MNAENCA Index Ready ✨');
+    console.log('💎 MNAENCA Index Ready ✨');
 </script>
 </body>
 </html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 4. chat.html - دردشة مع دعم الصور والتسجيلات الصوتية
-# ═══════════════════════════════════════════════════════════
-
-def build_chat():
-    return f"""<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-    <title>💖 MNAENCA | دردشة</title>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        {COMMON_CSS}
-        body{{height:100vh;height:100dvh;display:flex;flex-direction:column;background:#140511;overflow:hidden}}
-        .header{{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:rgba(20,5,17,0.9);backdrop-filter:blur(20px);flex-shrink:0;z-index:10}}
-        .btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none;flex-shrink:0}}
-        .header-title{{flex:1;min-width:0}}
-        .header h2{{font-size:16px;font-weight:700}}
-        .header h2 i{{color:var(--accent);margin-left:6px}}
-        .conv-list{{flex:1;overflow-y:auto;padding:8px 0}}
-        .conv-item{{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(236,72,153,0.06);cursor:pointer;transition:background 0.2s;animation:fadeIn 0.3s ease}}
-        .conv-item:hover{{background:rgba(236,72,153,0.04)}}
-        .chat-avatar{{width:50px;height:50px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.3);flex-shrink:0;background:rgba(236,72,153,0.1)}}
-        .chat-avatar img{{width:100%;height:100%;object-fit:cover}}
-        .conv-info{{flex:1;min-width:0}}
-        .conv-name{{font-weight:600;font-size:15px;margin-bottom:3px;display:flex;align-items:center;gap:6px}}
-        .conv-last{{font-size:12px;color:rgba(255,255,255,0.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-        .chat-msgs{{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:6px;background:#0d030a}}
-        .bubble{{max-width:80%;padding:10px 16px;border-radius:20px;word-break:break-word;font-size:14px;position:relative;animation:msgIn 0.35s cubic-bezier(0.16,1,0.3,1);line-height:1.5}}
-        @keyframes msgIn{{from{{opacity:0;transform:translateY(12px) scale(0.95)}}to{{opacity:1;transform:translateY(0) scale(1)}}}}
-        .bubble.sent{{background:linear-gradient(135deg,var(--accent),var(--accent2));align-self:flex-end;color:#fff;border-bottom-right-radius:6px;box-shadow:0 4px 15px rgba(236,72,153,0.2)}}
-        .bubble.received{{background:rgba(236,72,153,0.08);align-self:flex-start;border:1px solid rgba(236,72,153,0.12);border-bottom-left-radius:6px}}
-        .bubble img{{max-width:200px;border-radius:14px;cursor:pointer;margin-top:6px;display:block}}
-        .bubble audio{{max-width:250px;margin-top:6px;height:40px;border-radius:20px;background:rgba(0,0,0,0.3)}}
-        .bubble .time{{font-size:9px;opacity:0.5;margin-top:6px;text-align:left;direction:ltr}}
-        .input-bar{{display:flex;gap:8px;padding:10px 12px;background:rgba(20,5,17,0.95);backdrop-filter:blur(20px);border-top:1px solid rgba(236,72,153,0.2);align-items:center;flex-shrink:0;z-index:10;min-height:60px}}
-        .input-bar input{{flex:1;padding:12px 18px;border-radius:30px;background:rgba(236,72,153,0.06);border:1px solid rgba(236,72,153,0.25);color:#fff;font-size:14px;outline:none;transition:all 0.3s;min-width:0}}
-        .input-bar input:focus{{border-color:var(--accent);box-shadow:0 0 15px rgba(236,72,153,0.15);background:rgba(236,72,153,0.1)}}
-        .input-bar input::placeholder{{color:rgba(255,255,255,0.35)}}
-        .btn-icon{{width:42px;height:42px;background:rgba(236,72,153,0.1);border:1px solid rgba(236,72,153,0.2);border-radius:50%;color:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s;position:relative}}
-        .btn-icon:hover{{background:rgba(236,72,153,0.25);border-color:var(--accent)}}
-        .btn-icon.recording{{background:rgba(239,68,68,0.4);border-color:#ef4444;animation:pulse 0.8s ease-in-out infinite;color:#ef4444}}
-        .btn-send{{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:50%;color:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 20px rgba(236,72,153,0.4);transition:all 0.3s}}
-        .btn-send:hover{{transform:scale(1.05);box-shadow:0 8px 25px rgba(236,72,153,0.6)}}
-        .btn-send:active{{transform:scale(0.95)}}
-        .empty-state{{text-align:center;padding:50px 20px;color:rgba(255,255,255,0.4)}}
-        .empty-state i{{font-size:60px;color:var(--accent);opacity:0.3;margin-bottom:16px;display:block}}
-        .empty-state p{{font-size:15px;margin-bottom:6px}}
-        .empty-state span{{font-size:12px;opacity:0.5}}
-        .chat-header-info{{display:flex;align-items:center;gap:12px;flex:1;min-width:0}}
-        .chat-header-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.3);flex-shrink:0}}
-        .chat-header-avatar img{{width:100%;height:100%;object-fit:cover}}
-        .recording-status{{
-            display:none;position:absolute;bottom:-25px;left:50%;transform:translateX(-50%);
-            background:rgba(239,68,68,0.9);padding:4px 12px;border-radius:12px;
-            font-size:11px;white-space:nowrap;color:#fff;
-        }}
-        .btn-icon.recording .recording-status{{display:block}}
-    </style>
-</head>
-<body>
-<div id="loader" style="flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
-    <div class="spinner"></div>
-    <span style="color:rgba(255,255,255,0.5)">💖 جاري تحميل الدردشة...</span>
-</div>
-<div id="convView" style="display:none;flex:1;flex-direction:column;overflow:hidden">
-    <div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><div class="header-title"><h2><i class="fas fa-comments"></i> المحادثات</h2></div></div>
-    <div class="conv-list" id="convList"></div>
-    <div class="empty-state" id="convEmpty" style="display:none"><i class="fas fa-comment-slash"></i><p>لا توجد محادثات</p><span>ابدأ محادثة من ملف المستخدم</span></div>
-</div>
-<div id="chatView" style="display:none;flex:1;flex-direction:column;overflow:hidden">
-    <div class="header">
-        <button class="btn-back" onclick="showConvs()"><i class="fas fa-arrow-right"></i></button>
-        <div class="chat-header-info"><div class="chat-header-avatar" id="chatAvatar"><img src="" alt=""></div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:15px" id="chatName">محادثة</div><div style="font-size:11px;opacity:0.5" id="chatOnline"></div></div></div>
-        <button class="btn-icon" onclick="copyChat()" title="نسخ المحادثة"><i class="fas fa-copy"></i></button>
-    </div>
-    <div class="chat-msgs" id="msgsList"><div class="empty-state"><i class="fas fa-comments"></i><p>ابدأ المحادثة</p><span>أرسل رسالة للبدء 💖</span></div></div>
-    <div class="input-bar">
-        <button class="btn-icon" onclick="sendImage()" title="إرسال صورة"><i class="fas fa-image"></i></button>
-        <button class="btn-icon" id="voiceBtn" onmousedown="startRecording()" onmouseup="stopRecording()" onmouseleave="stopRecording()" ontouchstart="startRecording()" ontouchend="stopRecording()" ontouchcancel="stopRecording()" title="تسجيل صوتي">
-            <i class="fas fa-microphone"></i>
-            <span class="recording-status">🎤 جاري التسجيل...</span>
-        </button>
-        <input type="text" id="msgInput" placeholder="اكتب رسالتك هنا..." autocomplete="off" onkeydown="if(event.key==='Enter')sendMsg()">
-        <button class="btn-send" onclick="sendMsg()"><i class="fas fa-paper-plane"></i></button>
-    </div>
-</div>
-<div class="toast-msg" id="toastMsg">✅ تم</div>
-<script src="firebase-config.js"></script>
-<script>
-    let currentUser=null,allUsers={{}},chatUserId=null;
-    let mediaRecorder=null,audioChunks=[],isRecording=false;
-
-    auth.onAuthStateChanged(async u=>{{
-        if(!u){{window.location.href='auth.html';return}}
-        currentUser=u;
-        const us=await db.ref('users').once('value');
-        allUsers=us.val()||{{}};
-        document.getElementById('loader').style.display='none';
-        const params=new URLSearchParams(window.location.search);
-        const targetUid=params.get('uid');
-        if(targetUid){{openChat(targetUid)}}else{{showConvs()}}
-        setInterval(()=>{{if(currentUser)db.ref('users/'+currentUser.uid+'/lastSeen').set(Date.now())}},60000)
-    }});
-
-    function showConvs(){{document.getElementById('chatView').style.display='none';document.getElementById('convView').style.display='flex';chatUserId=null;loadConvs()}}
-
-    async function loadConvs(){{
-        const cl=document.getElementById('convList');
-        const ce=document.getElementById('convEmpty');
-        cl.innerHTML='';
-        const snap=await db.ref('private_messages').once('value');
-        const all=snap.val()||{{}};
-        const found=new Set();
-        Object.keys(all).forEach(cid=>{{
-            const[u1,u2]=cid.split('_');
-            const other=u1===currentUser.uid?u2:u2===currentUser.uid?u1:null;
-            if(other&&!found.has(other)&&allUsers[other])found.add(other);
-        }});
-        if(!found.size){{ce.style.display='block';return}}else{{ce.style.display='none'}}
-        found.forEach(uid=>{{
-            const u=allUsers[uid];
-            const d=document.createElement('div');
-            d.className='conv-item';
-            d.innerHTML=`<div class="chat-avatar"><img src="${{u?.avatarUrl||(DICEBEAR_URL+'?seed='+uid)}}" alt="" onerror="this.src='${{DICEBEAR_URL}}?seed=${{uid}}'"></div><div class="conv-info"><div class="conv-name">@${{u?.username||'مستخدم'}} ${{u?.isVerified?'<span style="color:#fbcfe8;font-size:12px"><i class="fas fa-check-circle"></i></span>':''}}</div><div class="conv-last">اضغط للدخول إلى المحادثة 💬</div></div>`;
-            d.onclick=()=>openChat(uid);
-            cl.appendChild(d)
-        }})
-    }}
-
-    async function openChat(uid){{
-        chatUserId=uid;
-        const u=allUsers[uid];
-        document.getElementById('chatName').innerText='@'+(u?.username||'مستخدم');
-        document.getElementById('chatAvatar').querySelector('img').src=u?.avatarUrl||(DICEBEAR_URL+'?seed='+uid);
-        document.getElementById('convView').style.display='none';
-        document.getElementById('chatView').style.display='flex';
-        const onlineEl=document.getElementById('chatOnline');
-        db.ref('presence/'+uid).on('value',s=>{{
-            const online=s.val();
-            onlineEl.innerHTML=online?'<span style="color:#22c55e">● نشط الآن</span>':'آخر ظهور: '+formatTime(u?.lastSeen);
-        }});
-        await loadMsgs();
-        document.getElementById('msgInput').focus();
-    }}
-
-    function getChatId(){{return[currentUser.uid,chatUserId].sort().join('_')}}
-
-    async function loadMsgs(){{
-        const ml=document.getElementById('msgsList');
-        if(!chatUserId)return;
-        const snap=await db.ref('private_messages/'+getChatId()).once('value');
-        const ms=snap.val()||{{}};
-        const msgsArr=Object.values(ms).sort((a,b)=>a.timestamp-b.timestamp);
-        if(!msgsArr.length){{ml.innerHTML='<div class="empty-state"><i class="fas fa-comments"></i><p>ابدأ المحادثة</p><span>أرسل رسالة للبدء 💖</span></div>';return}}
-        ml.innerHTML=msgsArr.map(m=>{{
-            const sent=m.senderId===currentUser.uid;
-            let content='';
-            if(m.type==='image'){{
-                content=`<img src="${{m.imageUrl}}" onclick="window.open('${{m.imageUrl}}','_blank')" loading="lazy">`;
-            }} else if(m.type==='voice'){{
-                content=`<audio controls src="${{m.voiceUrl}}"></audio><div style="font-size:11px;opacity:0.6;margin-top:4px">🎤 ${{m.duration||'0'}} ثانية</div>`;
-            }} else {{
-                content=m.text;
-            }}
-            return `<div class="bubble ${{sent?'sent':'received'}}">${{content}}<div class="time">${{new Date(m.timestamp).toLocaleTimeString('ar-SA',{{hour:'2-digit',minute:'2-digit'}})}}</div></div>`;
-        }}).join('');
-        setTimeout(()=>{{ml.scrollTop=ml.scrollHeight}},100)
-    }}
-
-    async function sendMsg(){{
-        const inp=document.getElementById('msgInput');
-        const txt=inp.value.trim();
-        if(!txt||!chatUserId)return;
-        inp.value='';
-        await db.ref('private_messages/'+getChatId()).push({{senderId:currentUser.uid,text:txt,type:'text',timestamp:Date.now()}});
-        await loadMsgs();
-    }}
-
-    async function sendImage(){{
-        if(!chatUserId)return;
-        const inp=document.createElement('input');
-        inp.type='file';inp.accept='image/*';
-        inp.onchange=async(e)=>{{
-            const file=e.target.files[0];if(!file)return;
-            showToast('⏳ جاري رفع الصورة...');
-            const fd=new FormData();fd.append('file',file);fd.append('upload_preset',UPLOAD_PRESET);
-            try{{
-                const res=await fetch('https://api.cloudinary.com/v1_1/'+CLOUD_NAME+'/image/upload',{{method:'POST',body:fd}});
-                const data=await res.json();
-                if(data.secure_url){{
-                    await db.ref('private_messages/'+getChatId()).push({{senderId:currentUser.uid,type:'image',imageUrl:data.secure_url,timestamp:Date.now()}});
-                    await loadMsgs();showToast('✅ تم إرسال الصورة');
-                }}
-            }}catch(e){{showToast('❌ فشل رفع الصورة')}}
-        }};
-        inp.click();
-    }}
-
-    async function startRecording(){{
-        if(!chatUserId||isRecording)return;
-        try{{
-            const stream=await navigator.mediaDevices.getUserMedia({{audio:true}});
-            mediaRecorder=new MediaRecorder(stream);
-            audioChunks=[];
-            mediaRecorder.ondataavailable=e=>{{if(e.data.size>0)audioChunks.push(e.data)}};
-            mediaRecorder.onstop=async()=>{{
-                const audioBlob=new Blob(audioChunks,{{type:'audio/webm'}});
-                const duration=Math.round(audioChunks.length*0.1);
-                stream.getTracks().forEach(t=>t.stop());
-                showToast('⏳ جاري رفع التسجيل الصوتي...');
-                const fd=new FormData();fd.append('file',audioBlob,'voice.webm');fd.append('upload_preset',UPLOAD_PRESET);
-                try{{
-                    const res=await fetch(CLOUDINARY_RAW_UPLOAD_URL,{{method:'POST',body:fd}});
-                    const data=await res.json();
-                    if(data.secure_url){{
-                        await db.ref('private_messages/'+getChatId()).push({{senderId:currentUser.uid,type:'voice',voiceUrl:data.secure_url,duration:duration,timestamp:Date.now()}});
-                        await loadMsgs();showToast('✅ تم إرسال التسجيل الصوتي');
-                    }}
-                }}catch(e){{showToast('❌ فشل رفع التسجيل الصوتي')}}
-                document.getElementById('voiceBtn').classList.remove('recording');
-                isRecording=false;
-            }};
-            mediaRecorder.start();
-            isRecording=true;
-            document.getElementById('voiceBtn').classList.add('recording');
-            showToast('🎤 جاري التسجيل... ارفع إصبعك للإرسال');
-        }}catch(e){{showToast('❌ لا يمكن الوصول للميكروفون');}}
-    }}
-
-    function stopRecording(){{
-        if(!isRecording||!mediaRecorder)return;
-        mediaRecorder.stop();
-        document.getElementById('voiceBtn').classList.remove('recording');
-        isRecording=false;
-    }}
-
-    async function copyChat(){{
-        if(!chatUserId)return;
-        const snap=await db.ref('private_messages/'+getChatId()).once('value');
-        const msgs=snap.val()||{{}};
-        let text='💬 محادثة MNAENCA\\n'+'─'.repeat(30)+'\\n';
-        Object.values(msgs).sort((a,b)=>a.timestamp-b.timestamp).forEach(m=>{{
-            const sender=m.senderId===currentUser.uid?'أنت':(allUsers[m.senderId]?.username||'مستخدم');
-            let content=m.text||'';
-            if(m.type==='image')content='[صورة]';
-            else if(m.type==='voice')content='[🎤 تسجيل صوتي '+ (m.duration||'0') +' ث]';
-            const time=new Date(m.timestamp).toLocaleTimeString('ar-SA');
-            text+=`\\n${{sender}} (${{time}}):\\n${{content}}\\n`;
-        }});
-        try{{await navigator.clipboard.writeText(text)}}catch(e){{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta)}}
-        showToast('✅ تم نسخ المحادثة');
-    }}
-
-    function showToast(msg){{const toast=document.getElementById('toastMsg');toast.innerText=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500)}}
-    function formatTime(ts){{if(!ts)return'غير معروف';const diff=Date.now()-ts;const mins=Math.floor(diff/60000);const hours=Math.floor(diff/3600000);const days=Math.floor(diff/86400000);if(mins<1)return'الآن';if(mins<60)return'منذ '+mins+' د';if(hours<24)return'منذ '+hours+' س';if(days<7)return'منذ '+days+' يوم';return new Date(ts).toLocaleDateString('ar-SA')}}
-    console.log('💖 MNAENCA Chat 2.0 Ready ✨');
-</script>
-</body>
-</html>"""
-
-# ═══════════════════════════════════════════════════════════
-# 💖 5. profile.html - ملف شخصي متطور مع لوحة أدمن كاملة
+# 💎 4. profile.html - ملف شخصي محترف 2.0 (مطور بالكامل)
 # ═══════════════════════════════════════════════════════════
 
 def build_profile():
@@ -1550,7 +2053,7 @@ def build_profile():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>💖 MNAENCA | ملف شخصي</title>
+    <title>💎 MNAENCA | ملف شخصي</title>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
@@ -1560,30 +2063,31 @@ def build_profile():
         body{{min-height:100vh;overflow-y:auto;overflow-x:hidden;}}
         .cover-section{{position:relative;width:100%;height:260px;overflow:hidden;cursor:pointer}}
         .cover-img{{width:100%;height:130%;object-fit:cover;transition:transform 0.1s linear;transform:translateY(0)}}
-        .cover-gradient{{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,5,17,0.4) 60%,rgba(20,5,17,0.95) 100%);pointer-events:none;z-index:1}}
-        .cover-glow{{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(236,72,153,0.15) 0%,transparent 70%);pointer-events:none;z-index:2}}
-        .cover-edit-btn{{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;border:1px solid rgba(236,72,153,0.3);color:#fff;font-size:14px;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.3)}}
-        .cover-edit-btn:hover{{background:rgba(236,72,153,0.4);box-shadow:0 0 20px rgba(236,72,153,0.5)}}
+        .cover-gradient{{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(5,20,11,0.4) 60%,rgba(5,20,11,0.95) 100%);pointer-events:none;z-index:1}}
+        .cover-glow{{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(16,185,129,0.15) 0%,transparent 70%);pointer-events:none;z-index:2}}
+        .cover-edit-btn{{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;border:1px solid rgba(16,185,129,0.3);color:#fff;font-size:14px;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.3)}}
+        .cover-edit-btn:hover{{background:rgba(16,185,129,0.4);box-shadow:0 0 20px rgba(16,185,129,0.5)}}
         .btn-back{{position:fixed;top:20px;right:20px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:50;border:1px solid var(--border);color:#fff;font-size:16px;transition:all 0.3s}}
-        .btn-back:hover{{background:rgba(236,72,153,0.3);box-shadow:0 0 20px rgba(236,72,153,0.4)}}
+        .btn-back:hover{{background:rgba(16,185,129,0.3);box-shadow:0 0 20px rgba(16,185,129,0.4)}}
         .avatar-wrap{{position:relative;z-index:2;margin-top:-60px;display:flex;justify-content:center}}
-        .avatar-lg{{width:120px;height:120px;border-radius:50%;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,#ec4899,#f472b6,#fbcfe8);padding:3px;box-shadow:0 0 30px rgba(236,72,153,0.4),0 0 60px rgba(236,72,153,0.1);animation:avatarGlow 3s ease-in-out infinite}}
-        @keyframes avatarGlow{{0%,100%{{box-shadow:0 0 30px rgba(236,72,153,0.4),0 0 60px rgba(236,72,153,0.1)}}50%{{box-shadow:0 0 40px rgba(244,114,182,0.7),0 0 80px rgba(236,72,153,0.3)}}}}
+        .avatar-lg{{width:120px;height:120px;border-radius:50%;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,#10b981,#34d399,#a7f3d0);padding:3px;box-shadow:0 0 30px rgba(16,185,129,0.4),0 0 60px rgba(16,185,129,0.1);animation:avatarGlow 3s ease-in-out infinite}}
+        @keyframes avatarGlow{{0%,100%{{box-shadow:0 0 30px rgba(16,185,129,0.4),0 0 60px rgba(16,185,129,0.1)}}50%{{box-shadow:0 0 40px rgba(52,211,153,0.7),0 0 80px rgba(16,185,129,0.3)}}}}
         .avatar-lg img{{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid var(--bg)}}
-        .avatar-edit-btn{{position:absolute;bottom:5px;right:5px;width:30px;height:30px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid var(--bg);color:#fff;font-size:12px;box-shadow:0 0 15px rgba(236,72,153,0.5)}}
+        .avatar-edit-btn{{position:absolute;bottom:5px;right:5px;width:30px;height:30px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid var(--bg);color:#fff;font-size:12px;box-shadow:0 0 15px rgba(16,185,129,0.5)}}
         .online-dot{{position:absolute;top:10px;right:10px;width:18px;height:18px;background:#22c55e;border-radius:50%;border:3px solid var(--bg);z-index:3;box-shadow:0 0 10px rgba(34,197,94,0.6)}}
         .profile-info{{padding:20px 20px 10px;text-align:center}}
         .username{{font-size:22px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;justify-content:center;gap:8px}}
         .bio-text{{font-size:13px;opacity:0.7;margin-bottom:8px;max-width:320px;margin-left:auto;margin-right:auto;line-height:1.5}}
         .contact-info{{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;font-size:12px}}
         .contact-info a{{color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:5px;background:var(--card);padding:6px 14px;border-radius:20px;border:1px solid var(--border);transition:all 0.3s}}
-        .contact-info a:hover{{background:rgba(236,72,153,0.15);box-shadow:0 0 15px rgba(236,72,153,0.2)}}
+        .contact-info a:hover{{background:rgba(16,185,129,0.15);box-shadow:0 0 15px rgba(16,185,129,0.2)}}
         .last-seen{{font-size:11px;opacity:0.5;display:flex;align-items:center;justify-content:center;gap:5px;margin-top:6px}}
         
+        /* ✨ إحصائيات متحركة */
         .stats-row{{
             display:flex;justify-content:center;gap:20px;
             margin:15px 20px;padding:18px;
-            background:rgba(236,72,153,0.04);
+            background:rgba(16,185,129,0.04);
             backdrop-filter:blur(20px);border-radius:20px;
             border:1px solid var(--border);
             box-shadow:0 8px 32px rgba(0,0,0,0.2);
@@ -1594,36 +2098,37 @@ def build_profile():
             position:relative;flex:1;
         }}
         .stat-item:hover{{
-            background:rgba(236,72,153,0.08);
+            background:rgba(16,185,129,0.08);
             transform:translateY(-3px);
-            box-shadow:0 8px 25px rgba(236,72,153,0.15);
+            box-shadow:0 8px 25px rgba(16,185,129,0.15);
         }}
         .stat-item:active{{transform:scale(0.95)}}
         .stat-val{{font-size:22px;font-weight:800;color:var(--accent2);transition:all 0.3s}}
-        .stat-item:hover .stat-val{{color:#fff;text-shadow:0 0 20px rgba(244,114,182,0.8)}}
+        .stat-item:hover .stat-val{{color:#fff;text-shadow:0 0 20px rgba(52,211,153,0.8)}}
         .stat-lbl{{font-size:11px;opacity:0.6;margin-top:4px;font-weight:500}}
         .stat-icon-mini{{font-size:16px;margin-bottom:4px;opacity:0.5}}
         .stat-item:hover .stat-icon-mini{{opacity:1}}
         
         .action-btns{{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 20px 20px}}
-        .btn{{background:rgba(236,72,153,0.06);border:1px solid var(--border);padding:10px 20px;border-radius:25px;color:#fff;cursor:pointer;font-size:13px;transition:all 0.3s;display:flex;align-items:center;gap:6px;backdrop-filter:blur(10px)}}
-        .btn:hover{{background:rgba(236,72,153,0.15);border-color:var(--accent);box-shadow:0 0 20px rgba(236,72,153,0.2)}}
-        .btn-primary{{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;font-weight:700;color:#fff;box-shadow:0 8px 25px rgba(236,72,153,0.4)}}
-        .btn-primary:hover{{transform:translateY(-2px);box-shadow:0 12px 35px rgba(236,72,153,0.6)}}
+        .btn{{background:rgba(16,185,129,0.06);border:1px solid var(--border);padding:10px 20px;border-radius:25px;color:#fff;cursor:pointer;font-size:13px;transition:all 0.3s;display:flex;align-items:center;gap:6px;backdrop-filter:blur(10px)}}
+        .btn:hover{{background:rgba(16,185,129,0.15);border-color:var(--accent);box-shadow:0 0 20px rgba(16,185,129,0.2)}}
+        .btn-primary{{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;font-weight:700;color:#fff;box-shadow:0 8px 25px rgba(16,185,129,0.4)}}
+        .btn-primary:hover{{transform:translateY(-2px);box-shadow:0 12px 35px rgba(16,185,129,0.6)}}
         .btn-outline{{background:transparent;border:2px solid var(--accent);color:var(--accent2);font-weight:600}}
         
+        /* 🎬 قسم الفيديوهات */
         .section-header{{
             display:flex;justify-content:space-between;align-items:center;
             padding:20px 20px 12px;
         }}
         .section-title{{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}}
         .btn-see-all{{
-            background:rgba(236,72,153,0.1);border:1px solid var(--border);
+            background:rgba(16,185,129,0.1);border:1px solid var(--border);
             color:var(--accent2);padding:6px 14px;border-radius:20px;
             font-size:12px;cursor:pointer;transition:all 0.3s;
             display:flex;align-items:center;gap:6px;
         }}
-        .btn-see-all:hover{{background:rgba(236,72,153,0.2);box-shadow:0 0 15px rgba(236,72,153,0.2)}}
+        .btn-see-all:hover{{background:rgba(16,185,129,0.2);box-shadow:0 0 15px rgba(16,185,129,0.2)}}
         
         .videos-grid{{
             display:grid;grid-template-columns:repeat(3,1fr);
@@ -1661,16 +2166,17 @@ def build_profile():
             border-radius:10px;
         }}
         
+        /* 📝 قسم المنشورات */
         .posts-section{{padding:0 16px 20px;margin-bottom:20px}}
         .post-card{{
-            background:rgba(236,72,153,0.04);border:1px solid var(--border);
+            background:rgba(16,185,129,0.04);border:1px solid var(--border);
             border-radius:20px;padding:18px;margin-bottom:12px;
             backdrop-filter:blur(10px);transition:all 0.3s;
             animation:fadeIn 0.4s ease;
         }}
-        .post-card:hover{{border-color:rgba(236,72,153,0.3);box-shadow:0 8px 30px rgba(236,72,153,0.08)}}
+        .post-card:hover{{border-color:rgba(16,185,129,0.3);box-shadow:0 8px 30px rgba(16,185,129,0.08)}}
         .post-header{{display:flex;align-items:center;gap:10px;margin-bottom:10px}}
-        .post-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.2)}}
+        .post-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.2)}}
         .post-avatar img{{width:100%;height:100%;object-fit:cover}}
         .post-user-info h4{{font-size:14px;font-weight:600}}
         .post-user-info span{{font-size:10px;opacity:0.5}}
@@ -1681,9 +2187,10 @@ def build_profile():
         
         .empty-state{{text-align:center;opacity:0.5;padding:40px 20px}}
         .empty-state i{{font-size:48px;color:var(--accent);margin-bottom:12px;display:block}}
-        .badge-verified{{background:linear-gradient(135deg,#ec4899,#f472b6);color:#fff;font-size:12px;padding:3px 6px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;font-weight:bold;box-shadow:0 0 15px rgba(251,207,232,0.6);animation:verifyGlow 2s ease-in-out infinite}}
-        @keyframes verifyGlow{{0%,100%{{box-shadow:0 0 15px rgba(251,207,232,0.6)}}50%{{box-shadow:0 0 25px rgba(251,207,232,0.9)}}}}
+        .badge-verified{{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;font-size:12px;padding:3px 6px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;font-weight:bold;box-shadow:0 0 15px rgba(167,243,208,0.6);animation:verifyGlow 2s ease-in-out infinite}}
+        @keyframes verifyGlow{{0%,100%{{box-shadow:0 0 15px rgba(167,243,208,0.6)}}50%{{box-shadow:0 0 25px rgba(167,243,208,0.9)}}}}
         
+        /* ✨ Modal للمتابعين */
         .modal-overlay{{
             position:fixed;inset:0;background:rgba(0,0,0,0.8);
             backdrop-filter:blur(20px);z-index:500;
@@ -1692,7 +2199,7 @@ def build_profile():
         }}
         .modal-sheet{{
             width:100%;max-width:500px;max-height:80vh;
-            background:rgba(20,5,17,0.98);
+            background:rgba(5,20,11,0.98);
             border:1px solid var(--border);
             border-radius:28px 28px 0 0;
             overflow:hidden;display:flex;flex-direction:column;
@@ -1711,8 +2218,8 @@ def build_profile():
             padding:12px 20px;cursor:pointer;
             transition:background 0.2s;animation:fadeIn 0.3s ease;
         }}
-        .user-list-item:hover{{background:rgba(236,72,153,0.04)}}
-        .user-list-avatar{{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.2);flex-shrink:0}}
+        .user-list-item:hover{{background:rgba(16,185,129,0.04)}}
+        .user-list-avatar{{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.2);flex-shrink:0}}
         .user-list-avatar img{{width:100%;height:100%;object-fit:cover}}
         .user-list-info{{flex:1;min-width:0}}
         .user-list-info h4{{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}}
@@ -1722,11 +2229,12 @@ def build_profile():
             border:none;color:#fff;padding:7px 16px;border-radius:20px;
             font-size:11px;font-weight:600;cursor:pointer;
             transition:all 0.3s;flex-shrink:0;
-            box-shadow:0 4px 12px rgba(236,72,153,0.3);
+            box-shadow:0 4px 12px rgba(16,185,129,0.3);
         }}
-        .btn-follow-sm:hover{{box-shadow:0 6px 18px rgba(236,72,153,0.5)}}
-        .btn-follow-sm.following{{background:rgba(236,72,153,0.1);border:1px solid var(--border);color:#fff;box-shadow:none}}
+        .btn-follow-sm:hover{{box-shadow:0 6px 18px rgba(16,185,129,0.5)}}
+        .btn-follow-sm.following{{background:rgba(16,185,129,0.1);border:1px solid var(--border);color:#fff;box-shadow:none}}
         
+        /* 🎬 Modal مشغل الفيديو */
         .video-modal{{
             position:fixed;inset:0;background:#000;
             z-index:600;display:flex;align-items:center;
@@ -1743,12 +2251,13 @@ def build_profile():
             cursor:pointer;font-size:18px;z-index:5;
         }}
         
-        .edit-panel{{position:fixed;bottom:0;left:0;right:0;background:rgba(20,5,17,0.98);backdrop-filter:blur(40px);border-top:2px solid var(--accent);border-radius:24px 24px 0 0;padding:24px 20px 40px;z-index:200;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);max-height:80vh;overflow-y:auto;box-shadow:0 -10px 40px rgba(236,72,153,0.1)}}
+        /* Edit Panel */
+        .edit-panel{{position:fixed;bottom:0;left:0;right:0;background:rgba(5,20,11,0.98);backdrop-filter:blur(40px);border-top:2px solid var(--accent);border-radius:24px 24px 0 0;padding:24px 20px 40px;z-index:200;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);max-height:80vh;overflow-y:auto;box-shadow:0 -10px 40px rgba(16,185,129,0.1)}}
         .edit-panel.show{{transform:translateY(0)}}
         .edit-panel h3{{font-size:18px;font-weight:700;margin-bottom:20px;color:var(--accent2);text-align:center}}
         .edit-panel label{{display:block;font-size:12px;opacity:0.7;margin-bottom:6px;margin-top:14px}}
         .edit-panel input,.edit-panel textarea{{width:100%;padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--border);color:#fff;font-size:14px;outline:none;resize:none;font-family:'Segoe UI',sans-serif;transition:border 0.3s}}
-        .edit-panel input:focus,.edit-panel textarea:focus{{border-color:var(--accent);box-shadow:0 0 15px rgba(236,72,153,0.15)}}
+        .edit-panel input:focus,.edit-panel textarea:focus{{border-color:var(--accent);box-shadow:0 0 15px rgba(16,185,129,0.15)}}
         .edit-actions{{display:flex;gap:10px;margin-top:20px}}
         .edit-actions button{{flex:1;padding:12px;border-radius:25px;font-weight:700;cursor:pointer;font-size:14px;transition:all 0.3s}}
         .btn-save{{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff}}
@@ -1756,8 +2265,9 @@ def build_profile():
         .overlay-panel{{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:150;display:none}}
         .overlay-panel.show{{display:block}}
         
+        /* New Post Creator */
         .post-creator{{
-            background:rgba(236,72,153,0.04);border:1px solid var(--border);
+            background:rgba(16,185,129,0.04);border:1px solid var(--border);
             border-radius:20px;padding:16px;margin:0 16px 20px;
             backdrop-filter:blur(10px);
         }}
@@ -1774,20 +2284,21 @@ def build_profile():
             background:linear-gradient(135deg,var(--accent),var(--accent2));
             border:none;color:#fff;padding:8px 20px;border-radius:20px;
             font-weight:700;cursor:pointer;font-size:12px;
-            box-shadow:0 4px 12px rgba(236,72,153,0.3);
+            box-shadow:0 4px 12px rgba(16,185,129,0.3);
         }}
 
+        /* Admin Panel */
         .admin-panel{{padding:0 8px;margin:0 8px 100px 8px}}
-        .admin-panel h3{{color:#fbcfe8;font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px;font-weight:700}}
+        .admin-panel h3{{color:#a7f3d0;font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px;font-weight:700}}
         .admin-stats-grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}}
-        .stat-card{{background:rgba(236,72,153,0.06);border:1px solid rgba(236,72,153,0.15);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(10px)}}
-        .stat-icon{{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 15px rgba(236,72,153,0.3)}}
+        .stat-card{{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(10px)}}
+        .stat-icon{{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 15px rgba(16,185,129,0.3)}}
         .stat-info h4{{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:4px;font-weight:500}}
         .stat-info span{{font-size:22px;font-weight:800}}
         .admin-user-item{{display:flex;align-items:center;justify-content:space-between;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,0.03);transition:background 0.2s;border-radius:8px}}
-        .admin-user-item:hover{{background:rgba(236,72,153,0.04)}}
+        .admin-user-item:hover{{background:rgba(16,185,129,0.04)}}
         .admin-user-info{{display:flex;align-items:center;gap:12px;flex:1;min-width:0;cursor:pointer}}
-        .admin-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.3);flex-shrink:0}}
+        .admin-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.3);flex-shrink:0}}
         .admin-avatar img{{width:100%;height:100%;object-fit:cover}}
         .admin-user-details h4{{font-weight:600;font-size:15px}}
         .admin-user-details p{{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}}
@@ -1795,7 +2306,7 @@ def build_profile():
         .admin-btn{{border:none;border-radius:20px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:5px}}
         .btn-ban{{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.1)}}
         .btn-unban{{background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2)}}
-        .btn-verify{{background:linear-gradient(135deg,#ec4899,#f472b6);color:#fff;box-shadow:0 4px 12px rgba(236,72,153,0.3)}}
+        .btn-verify{{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;box-shadow:0 4px 12px rgba(16,185,129,0.3)}}
         .btn-delete-video{{background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.2)}}
         .btn-delete-video:hover{{background:rgba(239,68,68,0.3)}}
     </style>
@@ -1803,7 +2314,7 @@ def build_profile():
 <body>
 
 <div class="load-center" id="loader" style="display:flex;align-items:center;justify-content:center;min-height:80vh;flex-direction:column;gap:12px;color:rgba(255,255,255,0.5)">
-    <div class="spinner"></div><span>💖 تحميل الملف...</span>
+    <div class="spinner"></div><span>💎 تحميل الملف...</span>
 </div>
 
 <div id="content" style="display:none">
@@ -1837,6 +2348,7 @@ def build_profile():
         <div class="last-seen" id="lastSeenDisplay"></div>
     </div>
 
+    <!-- ✨ إحصائيات محسنة -->
     <div class="stats-row">
         <div class="stat-item" onclick="showUsersModal('following')">
             <div class="stat-icon-mini"><i class="fas fa-user-friends"></i></div>
@@ -1862,31 +2374,37 @@ def build_profile():
 
     <div class="action-btns" id="actionsBar"></div>
 
+    <!-- 📝 منشئ المنشورات (للملف الشخصي فقط) -->
     <div class="post-creator" id="postCreator" style="display:none">
-        <textarea id="newPostContent" placeholder="ماذا يدور في ذهنك؟ 💖" maxlength="500"></textarea>
+        <textarea id="newPostContent" placeholder="ماذا يدور في ذهنك؟ 💎" maxlength="500"></textarea>
         <div class="post-creator-actions">
             <button class="btn-post" onclick="createPost()"><i class="fas fa-paper-plane"></i> نشر</button>
         </div>
     </div>
 
+    <!-- 🎬 قسم الفيديوهات -->
     <div class="section-header">
         <div class="section-title"><i class="fas fa-video" style="color:var(--accent)"></i> الفيديوهات <span id="videosCount" style="font-size:12px;opacity:0.5;margin-right:6px"></span></div>
         <button class="btn-see-all" onclick="showAllVideos()"><span>عرض الكل</span> <i class="fas fa-chevron-left" style="font-size:10px"></i></button>
     </div>
     <div class="videos-grid" id="videosGrid"></div>
 
+    <!-- 📝 قسم المنشورات -->
     <div class="section-header" id="postsHeader">
         <div class="section-title"><i class="fas fa-feather-alt" style="color:var(--accent)"></i> المنشورات <span id="postsCount" style="font-size:12px;opacity:0.5;margin-right:6px"></span></div>
     </div>
     <div class="posts-section" id="postsSection"></div>
 </div>
 
+<!-- ✨ Modal المتابعين/المتابَعين -->
 <div id="usersModal" style="display:none"></div>
+
+<!-- 🎬 Modal مشغل الفيديو -->
 <div id="videoModal" style="display:none"></div>
 
 <div class="overlay-panel" id="overlayPanel" onclick="closeEditPanel()"></div>
 <div class="edit-panel" id="editPanel">
-    <h3>💖 لوحة تعديل الملف الشخصي</h3>
+    <h3>💎 لوحة تعديل الملف الشخصي</h3>
     <label>👤 اسم المستخدم</label>
     <input type="text" id="editUsername" placeholder="اسم المستخدم">
     <label>📝 السيرة الذاتية</label>
@@ -1958,8 +2476,8 @@ def build_profile():
         const u = allUsers[profileUserId];
         if(!u) {{ document.getElementById('content').innerHTML = '<div class="empty-state" style="padding-top:100px"><i class="fas fa-user-slash"></i><p>المستخدم غير موجود</p></div>'; return; }}
         
-        const pinkVerifiedBadge = u.isVerified ? '<span class="badge-verified"><i class="fas fa-check"></i></span>' : '';
-        document.getElementById('nameDisplay').innerHTML = '@' + (u.username || 'مستخدم') + ' ' + pinkVerifiedBadge;
+        const emeraldVerifiedBadge = u.isVerified ? '<span class="badge-verified"><i class="fas fa-check"></i></span>' : '';
+        document.getElementById('nameDisplay').innerHTML = '@' + (u.username || 'مستخدم') + ' ' + emeraldVerifiedBadge;
         document.getElementById('bioDisplay').innerText = u.bio || '';
         
         const contactInfo = document.getElementById('contactInfo');
@@ -2001,6 +2519,7 @@ def build_profile():
             lastSeen.innerHTML = '';
         }}
 
+        // Render video grid
         const grid = document.getElementById('videosGrid');
         grid.innerHTML = '';
         if(!uvs.length) {{ 
@@ -2021,6 +2540,7 @@ def build_profile():
             }});
         }}
 
+        // Render posts
         renderPosts(userPosts);
 
         const actionsBar = document.getElementById('actionsBar');
@@ -2033,7 +2553,7 @@ def build_profile():
         }} else {{
             const isFollowing = currentUserData?.following?.[profileUserId];
             actionsBar.innerHTML = `
-                <button class="btn btn-follow ${{isFollowing ? 'following' : ''}}" id="followBtn" onclick="toggleFollowUser()" style="${{isFollowing ? 'background:rgba(236,72,153,0.1);border:1px solid var(--border);box-shadow:none' : 'background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 25px rgba(236,72,153,0.4)'}}">
+                <button class="btn btn-follow ${{isFollowing ? 'following' : ''}}" id="followBtn" onclick="toggleFollowUser()" style="${{isFollowing ? 'background:rgba(16,185,129,0.1);border:1px solid var(--border);box-shadow:none' : 'background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 25px rgba(16,185,129,0.4)'}}">
                     ${{isFollowing ? '<i class="fas fa-user-check"></i> متابع' : '<i class="fas fa-user-plus"></i> متابعة'}}
                 </button>
                 <button class="btn btn-primary" onclick="window.location.href='chat.html?uid=${{profileUserId}}'"><i class="fas fa-comment"></i> مراسلة</button>
@@ -2070,6 +2590,7 @@ def build_profile():
         }}).join('');
     }}
 
+    // ✨ Modal عرض المتابعين/المتابَعين
     async function showUsersModal(type) {{
         const u = allUsers[profileUserId];
         const list = type === 'followers' ? (u?.followers || {{}}) : (u?.following || {{}});
@@ -2096,7 +2617,7 @@ def build_profile():
                     <div class="user-list-avatar"><img src="${{avatar}}" alt="" loading="lazy"></div>
                     <div class="user-list-info">
                         <h4>@${{user.username || 'مستخدم'}} ${{user.isVerified ? '<span class="badge-verified" style="width:16px;height:16px;font-size:9px"><i class="fas fa-check"></i></span>' : ''}}</h4>
-                        <p>${{user.bio || '💖 عضو في MNAENCA'}}</p>
+                        <p>${{user.bio || '💎 عضو في MNAENCA'}}</p>
                     </div>
                     ${{id !== currentUser?.uid ? `<button class="btn-follow-sm ${{isFollowingMe ? 'following' : ''}}" onclick="event.stopPropagation();toggleFollowModal('${{id}}', this)">${{isFollowingMe ? '<i class="fas fa-user-check"></i> متابع' : '<i class="fas fa-user-plus"></i> متابعة'}}</button>` : ''}}
                 </div>`;
@@ -2130,6 +2651,7 @@ def build_profile():
         await loadAll();
     }}
 
+    // 🎬 تشغيل الفيديو داخل Modal
     function playVideo(url) {{
         document.getElementById('videoModal').innerHTML = `
             <div class="video-modal" onclick="closeVideoModal()">
@@ -2144,6 +2666,7 @@ def build_profile():
         document.getElementById('videoModal').style.display = 'none';
     }}
 
+    // 📝 عرض كل الفيديوهات
     function showAllVideos() {{
         const uvs = allVideos.filter(v => v.sender === profileUserId).sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
         let html = `<div class="modal-overlay" onclick="closeAllVideos()">
@@ -2177,6 +2700,7 @@ def build_profile():
         document.getElementById('videoModal').style.display = 'none';
     }}
 
+    // 📝 إنشاء منشور
     async function createPost() {{
         const content = document.getElementById('newPostContent').value.trim();
         if(!content || !currentUser) return;
@@ -2273,11 +2797,11 @@ def build_profile():
             await userRef.remove(); await targetRef.remove();
             btn.innerHTML = '<i class="fas fa-user-plus"></i> متابعة';
             btn.style.background = 'linear-gradient(135deg,var(--accent),var(--accent2))';
-            btn.style.boxShadow = '0 8px 25px rgba(236,72,153,0.4)';
+            btn.style.boxShadow = '0 8px 25px rgba(16,185,129,0.4)';
         }} else {{
             await userRef.set(true); await targetRef.set(true);
             btn.innerHTML = '<i class="fas fa-user-check"></i> متابع';
-            btn.style.background = 'rgba(236,72,153,0.1)';
+            btn.style.background = 'rgba(16,185,129,0.1)';
             btn.style.boxShadow = 'none';
             btn.style.border = '1px solid var(--border)';
         }}
@@ -2286,7 +2810,7 @@ def build_profile():
     
     async function copyProfile() {{
         const u = allUsers[profileUserId];
-        const text = `👤 @${{u.username || 'مستخدم'}}\n📝 ${{u.bio || ''}}\n💖 MNAENCA 2026`;
+        const text = `👤 @${{u.username || 'مستخدم'}}\n📝 ${{u.bio || ''}}\n💎 MNAENCA 2026`;
         try {{ await navigator.clipboard.writeText(text); }} catch(e) {{ const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }}
         showToast('✅ تم نسخ معلومات الملف الشخصي');
     }}
@@ -2324,15 +2848,15 @@ def build_profile():
         adminDiv.innerHTML = `<h3><i class="fas fa-crown"></i> لوحة تحكم الأدمن</h3>
             <div class="admin-stats-grid">
                 <div class="stat-card"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-info"><h4>المستخدمين</h4><span>${{totalUsers}}</span></div></div>
-                <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#ec4899)"><i class="fas fa-video"></i></div><div class="stat-info"><h4>فيديوهات</h4><span>${{totalVideos}}</span></div></div>
+                <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#10b981)"><i class="fas fa-video"></i></div><div class="stat-info"><h4>فيديوهات</h4><span>${{totalVideos}}</span></div></div>
                 <div class="stat-card"><div class="stat-icon"><i class="fas fa-check-circle"></i></div><div class="stat-info"><h4>موثقين</h4><span>${{totalVerified}}</span></div></div>
                 <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><i class="fas fa-ban"></i></div><div class="stat-info"><h4>محظورين</h4><span>${{totalBanned}}</span></div></div>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(236,72,153,0.1);padding-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(16,185,129,0.1);padding-bottom:8px">
                 <span>📋 قائمة المستخدمين</span><span style="font-size:11px">${{totalUsers}} إجمالي</span>
             </div>
             <div id="adminDynamicList"></div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(236,72,153,0.1);padding-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(16,185,129,0.1);padding-bottom:8px">
                 <span>🎬 جميع الفيديوهات</span><span style="font-size:11px">${{totalVideos}} إجمالي</span>
             </div>
             <div id="adminVideosList"></div>`;
@@ -2418,13 +2942,13 @@ def build_profile():
         else window.location.href = 'profile.html?uid=' + id;
     }};
 
-    console.log('💖 MNAENCA Profile 3.0 Ready ✨');
+    console.log('💎 MNAENCA Profile 2.0 Ready ✨');
 </script>
 </body>
 </html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 6. upload.html - رفع فيديو
+# 💎 5. upload.html - رفع فيديو
 # ═══════════════════════════════════════════════════════════
 
 def build_upload():
@@ -2433,7 +2957,7 @@ def build_upload():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>💖 MNAENCA | رفع فيديو</title>
+    <title>💎 MNAENCA | رفع فيديو</title>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
@@ -2441,22 +2965,22 @@ def build_upload():
     <style>
         {COMMON_CSS}
         body{{min-height:100vh;overflow-y:auto;padding-bottom:100px}}
-        .header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);background:rgba(20,5,17,0.8);backdrop-filter:blur(20px);position:sticky;top:0;z-index:10}}
-        .btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}
+        .header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);background:rgba(5,20,11,0.8);backdrop-filter:blur(20px);position:sticky;top:0;z-index:10}}
+        .btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}
         .container{{max-width:500px;margin:0 auto;padding:20px}}
-        .dropzone{{border:2px dashed rgba(236,72,153,0.3);border-radius:20px;padding:50px 20px;text-align:center;cursor:pointer;background:var(--glass);margin-bottom:20px;transition:all 0.3s}}
-        .dropzone:hover{{border-color:var(--accent);background:rgba(236,72,153,0.05)}}
+        .dropzone{{border:2px dashed rgba(16,185,129,0.3);border-radius:20px;padding:50px 20px;text-align:center;cursor:pointer;background:var(--glass);margin-bottom:20px;transition:all 0.3s}}
+        .dropzone:hover{{border-color:var(--accent);background:rgba(16,185,129,0.05)}}
         .dropzone i{{font-size:48px;color:var(--accent)}}
         .dropzone video{{width:100%;max-height:250px;object-fit:contain;margin-top:12px;border-radius:12px;display:none}}
-        .form-card{{background:rgba(236,72,153,0.03);border:1px solid var(--border);border-radius:20px;padding:20px}}
+        .form-card{{background:rgba(16,185,129,0.03);border:1px solid var(--border);border-radius:20px;padding:20px}}
         .form-card label{{display:block;font-size:13px;opacity:0.7;margin-bottom:6px;margin-top:12px}}
-        .form-card textarea,.form-card input{{width:100%;padding:14px 16px;border-radius:16px;background:rgba(236,72,153,0.04);border:1px solid var(--border);color:#fff;font-size:14px;outline:none;resize:none;font-family:'Segoe UI',sans-serif}}
+        .form-card textarea,.form-card input{{width:100%;padding:14px 16px;border-radius:16px;background:rgba(16,185,129,0.04);border:1px solid var(--border);color:#fff;font-size:14px;outline:none;resize:none;font-family:'Segoe UI',sans-serif}}
         .progress-wrap{{display:none;margin:16px 0}}
         .progress-bar{{background:rgba(255,255,255,0.1);border-radius:30px;height:6px;overflow:hidden}}
         .progress-fill{{background:linear-gradient(90deg,var(--accent),var(--accent2));height:100%;border-radius:30px;width:0%;transition:width 0.3s}}
         .progress-text{{text-align:center;font-size:12px;margin-top:6px;color:var(--accent2)}}
-        .btn-upload{{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:30px;color:#fff;font-weight:700;font-size:15px;cursor:pointer;margin-top:16px;box-shadow:0 10px 25px rgba(236,72,153,0.4);transition:all 0.3s}}
-        .btn-upload:hover{{transform:translateY(-2px);box-shadow:0 15px 35px rgba(236,72,153,0.6)}}
+        .btn-upload{{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:30px;color:#fff;font-weight:700;font-size:15px;cursor:pointer;margin-top:16px;box-shadow:0 10px 25px rgba(16,185,129,0.4);transition:all 0.3s}}
+        .btn-upload:hover{{transform:translateY(-2px);box-shadow:0 15px 35px rgba(16,185,129,0.6)}}
         .btn-upload:disabled{{opacity:0.5;transform:none;box-shadow:none}}
         .status{{text-align:center;margin-top:12px;font-size:13px;min-height:20px}}
         .upload-details{{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.5);margin-top:10px}}
@@ -2540,72 +3064,172 @@ def build_upload():
         xhr.send(fd);
     }}
     function showStatus(msg,color){{const s=document.getElementById('status');s.innerText=msg;s.style.color=color}}
-    console.log('💖 MNAENCA Upload Ready');
+    console.log('💎 MNAENCA Upload Ready');
 </script>
 </body>
 </html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 7. explore.html
+# 💎 6. chat.html - دردشة
+# ═══════════════════════════════════════════════════════════
+
+def build_chat():
+    return f"""<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>💎 MNAENCA | دردشة</title>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        {COMMON_CSS}
+        body{{height:100vh;height:100dvh;display:flex;flex-direction:column;background:#05140b;overflow:hidden}}
+        .header{{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:rgba(5,20,11,0.9);backdrop-filter:blur(20px);flex-shrink:0;z-index:10}}
+        .btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none;flex-shrink:0}}
+        .header-title{{flex:1;min-width:0}}
+        .header h2{{font-size:16px;font-weight:700}}
+        .header h2 i{{color:var(--accent);margin-left:6px}}
+        .conv-list{{flex:1;overflow-y:auto;padding:8px 0}}
+        .conv-item{{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(16,185,129,0.06);cursor:pointer;transition:background 0.2s;animation:fadeIn 0.3s ease}}
+        .conv-item:hover{{background:rgba(16,185,129,0.04)}}
+        .chat-avatar{{width:50px;height:50px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.3);flex-shrink:0;background:rgba(16,185,129,0.1)}}
+        .chat-avatar img{{width:100%;height:100%;object-fit:cover}}
+        .conv-info{{flex:1;min-width:0}}
+        .conv-name{{font-weight:600;font-size:15px;margin-bottom:3px;display:flex;align-items:center;gap:6px}}
+        .conv-last{{font-size:12px;color:rgba(255,255,255,0.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+        .chat-msgs{{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:6px;background:#030d07}}
+        .bubble{{max-width:80%;padding:10px 16px;border-radius:20px;word-break:break-word;font-size:14px;position:relative;animation:msgIn 0.35s cubic-bezier(0.16,1,0.3,1);line-height:1.5}}
+        @keyframes msgIn{{from{{opacity:0;transform:translateY(12px) scale(0.95)}}to{{opacity:1;transform:translateY(0) scale(1)}}}}
+        .bubble.sent{{background:linear-gradient(135deg,var(--accent),var(--accent2));align-self:flex-end;color:#fff;border-bottom-right-radius:6px;box-shadow:0 4px 15px rgba(16,185,129,0.2)}}
+        .bubble.received{{background:rgba(16,185,129,0.08);align-self:flex-start;border:1px solid rgba(16,185,129,0.12);border-bottom-left-radius:6px}}
+        .bubble img{{max-width:200px;border-radius:14px;cursor:pointer;margin-top:6px;display:block}}
+        .bubble .time{{font-size:9px;opacity:0.5;margin-top:6px;text-align:left;direction:ltr}}
+        .input-bar{{display:flex;gap:8px;padding:10px 12px;background:rgba(5,20,11,0.95);backdrop-filter:blur(20px);border-top:1px solid rgba(16,185,129,0.2);align-items:center;flex-shrink:0;z-index:10;min-height:60px}}
+        .input-bar input{{flex:1;padding:12px 18px;border-radius:30px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.25);color:#fff;font-size:14px;outline:none;transition:all 0.3s;min-width:0}}
+        .input-bar input:focus{{border-color:var(--accent);box-shadow:0 0 15px rgba(16,185,129,0.15);background:rgba(16,185,129,0.1)}}
+        .input-bar input::placeholder{{color:rgba(255,255,255,0.35)}}
+        .btn-icon{{width:42px;height:42px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:50%;color:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}}
+        .btn-icon:hover{{background:rgba(16,185,129,0.25);border-color:var(--accent)}}
+        .btn-send{{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:50%;color:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 20px rgba(16,185,129,0.4);transition:all 0.3s}}
+        .btn-send:hover{{transform:scale(1.05);box-shadow:0 8px 25px rgba(16,185,129,0.6)}}
+        .btn-send:active{{transform:scale(0.95)}}
+        .empty-state{{text-align:center;padding:50px 20px;color:rgba(255,255,255,0.4)}}
+        .empty-state i{{font-size:60px;color:var(--accent);opacity:0.3;margin-bottom:16px;display:block}}
+        .empty-state p{{font-size:15px;margin-bottom:6px}}
+        .empty-state span{{font-size:12px;opacity:0.5}}
+        .chat-header-info{{display:flex;align-items:center;gap:12px;flex:1;min-width:0}}
+        .chat-header-avatar{{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.3);flex-shrink:0}}
+        .chat-header-avatar img{{width:100%;height:100%;object-fit:cover}}
+    </style>
+</head>
+<body>
+<div id="loader" style="flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+    <div class="spinner"></div>
+    <span style="color:rgba(255,255,255,0.5)">💎 جاري تحميل الدردشة...</span>
+</div>
+<div id="convView" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+    <div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><div class="header-title"><h2><i class="fas fa-comments"></i> المحادثات</h2></div></div>
+    <div class="conv-list" id="convList"></div>
+    <div class="empty-state" id="convEmpty" style="display:none"><i class="fas fa-comment-slash"></i><p>لا توجد محادثات</p><span>ابدأ محادثة من ملف المستخدم</span></div>
+</div>
+<div id="chatView" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+    <div class="header">
+        <button class="btn-back" onclick="showConvs()"><i class="fas fa-arrow-right"></i></button>
+        <div class="chat-header-info"><div class="chat-header-avatar" id="chatAvatar"><img src="" alt=""></div><div style="flex:1;min-width:0"><div style="font-weight:700;font-size:15px" id="chatName">محادثة</div><div style="font-size:11px;opacity:0.5" id="chatOnline"></div></div></div>
+        <button class="btn-icon" onclick="copyChat()" title="نسخ المحادثة"><i class="fas fa-copy"></i></button>
+    </div>
+    <div class="chat-msgs" id="msgsList"><div class="empty-state"><i class="fas fa-comments"></i><p>ابدأ المحادثة</p><span>أرسل رسالة للبدء 💎</span></div></div>
+    <div class="input-bar">
+        <button class="btn-icon" onclick="sendImage()" title="إرسال صورة"><i class="fas fa-image"></i></button>
+        <input type="text" id="msgInput" placeholder="اكتب رسالتك هنا..." autocomplete="off" onkeydown="if(event.key==='Enter')sendMsg()">
+        <button class="btn-send" onclick="sendMsg()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+<div class="toast-msg" id="toastMsg">✅ تم</div>
+<script src="firebase-config.js"></script>
+<script>
+    let currentUser=null,allUsers={{}},chatUserId=null;
+    auth.onAuthStateChanged(async u=>{{if(!u){{window.location.href='auth.html';return}}currentUser=u;const us=await db.ref('users').once('value');allUsers=us.val()||{{}};document.getElementById('loader').style.display='none';const params=new URLSearchParams(window.location.search);const targetUid=params.get('uid');if(targetUid){{openChat(targetUid)}}else{{showConvs()}}setInterval(()=>{{if(currentUser)db.ref('users/'+currentUser.uid+'/lastSeen').set(Date.now())}},60000)}});
+    function showConvs(){{document.getElementById('chatView').style.display='none';document.getElementById('convView').style.display='flex';chatUserId=null;loadConvs()}}
+    async function loadConvs(){{const cl=document.getElementById('convList');const ce=document.getElementById('convEmpty');cl.innerHTML='';const snap=await db.ref('private_messages').once('value');const all=snap.val()||{{}};const found=new Set();Object.keys(all).forEach(cid=>{{const[u1,u2]=cid.split('_');const other=u1===currentUser.uid?u2:u2===currentUser.uid?u1:null;if(other&&!found.has(other)&&allUsers[other])found.add(other)}});if(!found.size){{ce.style.display='block';return}}else{{ce.style.display='none'}}found.forEach(uid=>{{const u=allUsers[uid];const d=document.createElement('div');d.className='conv-item';d.innerHTML=`<div class="chat-avatar"><img src="${{u?.avatarUrl||(DICEBEAR_URL+'?seed='+uid)}}" alt="" onerror="this.src='${{DICEBEAR_URL}}?seed=${{uid}}'"></div><div class="conv-info"><div class="conv-name">@${{u?.username||'مستخدم'}} ${{u?.isVerified?'<span style="color:#a7f3d0;font-size:12px"><i class="fas fa-check-circle"></i></span>':''}}</div><div class="conv-last">اضغط للدخول إلى المحادثة 💬</div></div>`;d.onclick=()=>openChat(uid);cl.appendChild(d)}})}}
+    async function openChat(uid){{chatUserId=uid;const u=allUsers[uid];document.getElementById('chatName').innerText='@'+(u?.username||'مستخدم');document.getElementById('chatAvatar').querySelector('img').src=u?.avatarUrl||(DICEBEAR_URL+'?seed='+uid);document.getElementById('convView').style.display='none';document.getElementById('chatView').style.display='flex';const onlineEl=document.getElementById('chatOnline');db.ref('presence/'+uid).on('value',s=>{{const online=s.val();onlineEl.innerHTML=online?'<span style="color:#22c55e">● نشط الآن</span>':'آخر ظهور: '+formatTime(u?.lastSeen)}});await loadMsgs();document.getElementById('msgInput').focus()}}
+    function getChatId(){{return[currentUser.uid,chatUserId].sort().join('_')}}
+    async function loadMsgs(){{const ml=document.getElementById('msgsList');if(!chatUserId)return;const snap=await db.ref('private_messages/'+getChatId()).once('value');const ms=snap.val()||{{}};const msgsArr=Object.values(ms).sort((a,b)=>a.timestamp-b.timestamp);if(!msgsArr.length){{ml.innerHTML='<div class="empty-state"><i class="fas fa-comments"></i><p>ابدأ المحادثة</p><span>أرسل رسالة للبدء 💎</span></div>';return}}ml.innerHTML=msgsArr.map(m=>{{const sent=m.senderId===currentUser.uid;const content=m.type==='image'?`<img src="${{m.imageUrl}}" onclick="window.open('${{m.imageUrl}}','_blank')" loading="lazy">`:m.text;return `<div class="bubble ${{sent?'sent':'received'}}">${{content}}<div class="time">${{new Date(m.timestamp).toLocaleTimeString('ar-SA',{{hour:'2-digit',minute:'2-digit'}})}}</div></div>`}}).join('');setTimeout(()=>{{ml.scrollTop=ml.scrollHeight}},100)}}
+    async function sendMsg(){{const inp=document.getElementById('msgInput');const txt=inp.value.trim();if(!txt||!chatUserId)return;inp.value='';await db.ref('private_messages/'+getChatId()).push({{senderId:currentUser.uid,text:txt,type:'text',timestamp:Date.now()}});await loadMsgs()}}
+    async function sendImage(){{if(!chatUserId)return;const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.onchange=async(e)=>{{const file=e.target.files[0];if(!file)return;showToast('⏳ جاري رفع الصورة...');const fd=new FormData();fd.append('file',file);fd.append('upload_preset',UPLOAD_PRESET);try{{const res=await fetch('https://api.cloudinary.com/v1_1/'+CLOUD_NAME+'/image/upload',{{method:'POST',body:fd}});const data=await res.json();if(data.secure_url){{await db.ref('private_messages/'+getChatId()).push({{senderId:currentUser.uid,type:'image',imageUrl:data.secure_url,timestamp:Date.now()}});await loadMsgs();showToast('✅ تم إرسال الصورة')}}}}catch(e){{showToast('❌ فشل رفع الصورة')}}}};inp.click()}}
+    async function copyChat(){{if(!chatUserId)return;const snap=await db.ref('private_messages/'+getChatId()).once('value');const msgs=snap.val()||{{}};let text='💬 محادثة MNAENCA\\n'+'─'.repeat(30)+'\\n';Object.values(msgs).sort((a,b)=>a.timestamp-b.timestamp).forEach(m=>{{const sender=m.senderId===currentUser.uid?'أنت':(allUsers[m.senderId]?.username||'مستخدم');const content=m.type==='image'?'[صورة]':m.text;const time=new Date(m.timestamp).toLocaleTimeString('ar-SA');text+=`\\n${{sender}} (${{time}}):\\n${{content}}\\n`}});try{{await navigator.clipboard.writeText(text)}}catch(e){{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta)}}showToast('✅ تم نسخ المحادثة')}}
+    function showToast(msg){{const toast=document.getElementById('toastMsg');toast.innerText=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500)}}
+    function formatTime(ts){{if(!ts)return'غير معروف';const diff=Date.now()-ts;const mins=Math.floor(diff/60000);const hours=Math.floor(diff/3600000);const days=Math.floor(diff/86400000);if(mins<1)return'الآن';if(mins<60)return'منذ '+mins+' د';if(hours<24)return'منذ '+hours+' س';if(days<7)return'منذ '+days+' يوم';return new Date(ts).toLocaleDateString('ar-SA')}}
+    console.log('💎 MNAENCA Chat Ready ✨');
+</script>
+</body>
+</html>"""
+
+# ═══════════════════════════════════════════════════════════
+# 💎 7. explore.html - استكشاف
 # ═══════════════════════════════════════════════════════════
 
 def build_explore():
     return f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💖 MNAENCA | استكشاف</title>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💎 MNAENCA | استكشاف</title>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,5,17,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:2px}}.thumb{{aspect-ratio:9/16;background:rgba(236,72,153,0.05);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden}}.thumb img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}.thumb i{{position:absolute;font-size:24px;color:#fff;z-index:1;opacity:0;transition:opacity 0.3s}}.thumb:hover i{{opacity:1}}.thumb .views{{position:absolute;bottom:4px;left:4px;font-size:10px;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:10px;z-index:2}}</style></head>
+<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(5,20,11,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:2px}}.thumb{{aspect-ratio:9/16;background:rgba(16,185,129,0.05);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden}}.thumb img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}.thumb i{{position:absolute;font-size:24px;color:#fff;z-index:1;opacity:0;transition:opacity 0.3s}}.thumb:hover i{{opacity:1}}.thumb .views{{position:absolute;bottom:4px;left:4px;font-size:10px;background:rgba(0,0,0,0.6);padding:2px 6px;border-radius:10px;z-index:2}}</style></head>
 <body><div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><h2><i class="fas fa-globe" style="color:var(--accent)"></i> استكشاف</h2></div><div class="grid" id="exploreGrid"><div class="spinner" style="grid-column:1/-1;padding:50px"></div></div>
 <script src="firebase-config.js"></script>
-<script>let currentUser=null;auth.onAuthStateChanged(async u=>{{if(!u){{window.location.href='auth.html';return}}currentUser=u;loadExplore()}});async function loadExplore(){{const snap=await db.ref('videos').once('value');const videos=snap.val()||{{}};const allVids=Object.entries(videos).map(([k,v])=>({{id:k,...v}})).sort((a,b)=>(b.likes||0)-(a.likes||0));const g=document.getElementById('exploreGrid');if(!allVids.length){{g.innerHTML='<div style="text-align:center;padding:60px;grid-column:1/-1;opacity:0.5"><i class="fas fa-video-slash" style="font-size:48px;color:var(--accent);margin-bottom:12px;display:block"></i><p>لا توجد فيديوهات</p></div>';return}}g.innerHTML=allVids.map(v=>`<div class="thumb" onclick="window.open('${{v.url}}','_blank')">${{v.thumbnail?`<img src="${{v.thumbnail}}" loading="lazy">`:''}}<i class="fas fa-play"></i><span class="views"><i class="fas fa-heart" style="color:#ec4899;margin-right:4px"></i>${{v.likes||0}}</span></div>`).join('')}}</script></body></html>"""
+<script>let currentUser=null;auth.onAuthStateChanged(async u=>{{if(!u){{window.location.href='auth.html';return}}currentUser=u;loadExplore()}});async function loadExplore(){{const snap=await db.ref('videos').once('value');const videos=snap.val()||{{}};const allVids=Object.entries(videos).map(([k,v])=>({{id:k,...v}})).sort((a,b)=>(b.likes||0)-(a.likes||0));const g=document.getElementById('exploreGrid');if(!allVids.length){{g.innerHTML='<div style="text-align:center;padding:60px;grid-column:1/-1;opacity:0.5"><i class="fas fa-video-slash" style="font-size:48px;color:var(--accent);margin-bottom:12px;display:block"></i><p>لا توجد فيديوهات</p></div>';return}}g.innerHTML=allVids.map(v=>`<div class="thumb" onclick="window.open('${{v.url}}','_blank')">${{v.thumbnail?`<img src="${{v.thumbnail}}" loading="lazy">`:''}}<i class="fas fa-play"></i><span class="views"><i class="fas fa-heart" style="color:#10b981;margin-right:4px"></i>${{v.likes||0}}</span></div>`).join('')}}</script></body></html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 8. notifications.html
+# 💎 8. notifications.html - إشعارات
 # ═══════════════════════════════════════════════════════════
 
 def build_notifications():
     return f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💖 MNAENCA | إشعارات</title>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💎 MNAENCA | إشعارات</title>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,5,17,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.notif-item{{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center;animation:fadeIn 0.3s ease}}.notif-icon{{width:44px;height:44px;border-radius:50%;background:rgba(236,72,153,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--accent);flex-shrink:0}}</style></head>
+<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(5,20,11,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.notif-item{{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center;animation:fadeIn 0.3s ease}}.notif-icon{{width:44px;height:44px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--accent);flex-shrink:0}}</style></head>
 <body><div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><h2><i class="fas fa-bell" style="color:var(--accent)"></i> الإشعارات</h2></div><div id="notifsList"><div class="spinner"></div></div>
 <script src="firebase-config.js"></script>
 <script>let currentUser=null;auth.onAuthStateChanged(async u=>{{if(!u){{window.location.href='auth.html';return}}currentUser=u;loadNotifs()}});async function loadNotifs(){{const snap=await db.ref('notifications/'+currentUser.uid).once('value');const ns=snap.val()||{{}};const c=document.getElementById('notifsList');const items=Object.values(ns).reverse();if(!items.length){{c.innerHTML='<div style="text-align:center;opacity:0.5;padding:60px"><i class="fas fa-bell" style="font-size:48px;color:var(--accent);margin-bottom:12px;display:block"></i><p>لا توجد إشعارات</p></div>';return}}c.innerHTML=items.map(n=>`<div class="notif-item"><div class="notif-icon"><i class="fas fa-bell"></i></div><div><div style="font-weight:600;font-size:14px">${{n.from||'مستخدم'}}</div><div style="font-size:12px;opacity:0.6;margin-top:3px">${{n.msg||''}}</div><div style="font-size:10px;opacity:0.3;margin-top:4px">${{new Date(n.timestamp).toLocaleString('ar-SA')}}</div></div></div>`).join('');await db.ref('notifications/'+currentUser.uid).remove()}}</script></body></html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 9. settings.html
+# 💎 9. settings.html - إعدادات
 # ═══════════════════════════════════════════════════════════
 
 def build_settings():
     return f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💖 MNAENCA | إعدادات</title>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>💎 MNAENCA | إعدادات</title>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,5,17,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.setting-item{{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.2s}}.setting-item:hover{{background:var(--glass)}}.setting-item i{{color:var(--accent);font-size:18px;width:30px}}.btn-danger{{background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.3);color:#f87171;padding:12px 24px;border-radius:30px;cursor:pointer;font-size:14px;margin:20px auto;display:block;transition:all 0.3s}}.btn-danger:hover{{background:rgba(239,68,68,0.3);box-shadow:0 0 20px rgba(239,68,68,0.2)}}</style></head>
-<body><div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><h2><i class="fas fa-cog" style="color:var(--accent)"></i> الإعدادات</h2></div><div style="padding:8px 0"><div class="setting-item" onclick="window.location.href='profile.html'"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-user"></i><span>تعديل الملف الشخصي</span></div><i class="fas fa-chevron-left" style="opacity:0.5"></i></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-lock"></i><span>الخصوصية</span></div><i class="fas fa-chevron-left" style="opacity:0.5"></i></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-globe"></i><span>اللغة</span></div><span style="opacity:0.5;font-size:13px">العربية</span></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-info-circle"></i><span>حول التطبيق</span></div><span style="opacity:0.5;font-size:13px">v2026.5 💖</span></div><button class="btn-danger" onclick="if(confirm('هل أنت متأكد من تسجيل الخروج؟')){{auth.signOut();window.location.href='auth.html'}}"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button></div>
+<style>{COMMON_CSS}body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}.header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(5,20,11,0.8);backdrop-filter:blur(20px);z-index:10}}.btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}.setting-item{{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.2s}}.setting-item:hover{{background:var(--glass)}}.setting-item i{{color:var(--accent);font-size:18px;width:30px}}.btn-danger{{background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.3);color:#f87171;padding:12px 24px;border-radius:30px;cursor:pointer;font-size:14px;margin:20px auto;display:block;transition:all 0.3s}}.btn-danger:hover{{background:rgba(239,68,68,0.3);box-shadow:0 0 20px rgba(239,68,68,0.2)}}</style></head>
+<body><div class="header"><a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i></a><h2><i class="fas fa-cog" style="color:var(--accent)"></i> الإعدادات</h2></div><div style="padding:8px 0"><div class="setting-item" onclick="window.location.href='profile.html'"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-user"></i><span>تعديل الملف الشخصي</span></div><i class="fas fa-chevron-left" style="opacity:0.5"></i></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-lock"></i><span>الخصوصية</span></div><i class="fas fa-chevron-left" style="opacity:0.5"></i></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-globe"></i><span>اللغة</span></div><span style="opacity:0.5;font-size:13px">العربية</span></div><div class="setting-item"><div style="display:flex;align-items:center;gap:12px"><i class="fas fa-info-circle"></i><span>حول التطبيق</span></div><span style="opacity:0.5;font-size:13px">v2026.4 💎</span></div><button class="btn-danger" onclick="if(confirm('هل أنت متأكد من تسجيل الخروج؟')){{auth.signOut();window.location.href='auth.html'}}"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button></div>
 <script src="firebase-config.js"></script><script>auth.onAuthStateChanged(u=>{{if(!u)window.location.href='auth.html'}});</script></body></html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 10. profile-videos.html
+# 💎 10. profile-videos.html - جميع الفيديوهات
 # ═══════════════════════════════════════════════════════════
 
 def build_profile_videos():
+    """صفحة عرض جميع فيديوهات المستخدم"""
     return f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>💖 MNAENCA | جميع الفيديوهات</title>
+    <title>💎 MNAENCA | جميع الفيديوهات</title>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
@@ -2613,8 +3237,8 @@ def build_profile_videos():
     <style>
         {COMMON_CSS}
         body{{min-height:100vh;overflow-y:auto;background:var(--bg)}}
-        .header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(20,5,17,0.8);backdrop-filter:blur(20px);z-index:10}}
-        .btn-back{{background:rgba(236,72,153,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}
+        .header{{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(5,20,11,0.8);backdrop-filter:blur(20px);z-index:10}}
+        .btn-back{{background:rgba(16,185,129,0.1);border:1px solid var(--border);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;font-size:16px;text-decoration:none}}
         .videos-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:8px}}
         .video-grid-item{{aspect-ratio:9/16;position:relative;overflow:hidden;cursor:pointer;background:#000;border-radius:4px}}
         .video-grid-item img{{width:100%;height:100%;object-fit:cover}}
@@ -2648,26 +3272,25 @@ def build_profile_videos():
 </html>"""
 
 # ═══════════════════════════════════════════════════════════
-# 💖 MAIN
+# 💎 MAIN
 # ═══════════════════════════════════════════════════════════
 
 def main():
     print("""
 ╔══════════════════════════════════════════════════════════╗
 ║                                                          ║
-║  💖  MNAENCA 2026 - PINK ROSE GOLD LUXURY EDITION  💖 ║
-║     PROFILE 3.0 - CHAT 2.0 - AUTH 2.0                   ║
-║     10 Files - Full Stack Complete                       ║
+║  💎  MNAENCA 2026 - EMERALD GREEN LUXURY EDITION  ✨  ║
+║     PROFILE 2.0 - Advanced Professional Version          ║
+║     10 Files - 4000+ Lines                               ║
 ║                                                          ║
-║  🔥  Firebase: bomk-9f6ec                               ║
-║  ☁️   Cloudinary: lkqbt5yq / yg55_gk                  ║
-║  🎤  Voice Messages in Chat                              ║
-║  📸  Image Messages in Chat                              ║
-║  👥  Followers/Following Modal                           ║
-║  🎬  Video Player Modal                                  ║
-║  📝  Posts System                                        ║
-║  🛡️  Admin Panel                                        ║
-║  💖  Pink Rose Gold Design                               ║
+║  🎬 NATURAL VIDEO DISPLAY (No Zoom/Crop)               ║
+║  📝 TEXT BELOW VIDEO                                    ║
+║  📱 RESPONSIVE (Mobile + Landscape + Desktop)          ║
+║  👥 Followers/Following Modal with Actions              ║
+║  🎬 Video Player Modal (In-App)                         ║
+║  📝 Posts System (Create/Like/Delete)                   ║
+║  📊 Enhanced Animated Statistics                        ║
+║  🎨 Premium Glass Effects                                ║
 ║                                                          ║
 ╚══════════════════════════════════════════════════════════╝
     """)
@@ -2681,9 +3304,9 @@ def main():
     write("firebase-config.js", build_config())
     write("auth.html", build_auth())
     write("index.html", build_index())
-    write("chat.html", build_chat())
     write("profile.html", build_profile())
     write("upload.html", build_upload())
+    write("chat.html", build_chat())
     write("explore.html", build_explore())
     write("notifications.html", build_notifications())
     write("settings.html", build_settings())
@@ -2697,7 +3320,7 @@ def main():
     
     print(f"""
 {'='*60}
-  💖 BUILD COMPLETE - تم الإنشاء بنجاح! ✨
+  💎 BUILD COMPLETE - تم الإنشاء بنجاح! ✨
 {'='*60}
 
   📊 إحصائيات:
@@ -2708,27 +3331,27 @@ def main():
      1. firebase-config.js    → إعدادات Firebase + Cloudinary
      2. auth.html             → ✨ تسجيل دخول + اشتراك مطور
      3. index.html            → 🎬 الرئيسية (فيديو طبيعي + نص أسفل)
-     4. chat.html             → 💬 دردشة 2.0 (صور + تسجيلات صوتية)
-     5. profile.html          → ✨ ملف شخصي 3.0 متطور
-     6. upload.html           → رفع فيديو مع تتبع التقدم
+     4. profile.html          → ✨ ملف شخصي 2.0 متطور
+     5. upload.html           → رفع فيديو مع تتبع التقدم
+     6. chat.html             → دردشة خاصة
      7. explore.html          → استكشاف
      8. notifications.html    → الإشعارات
      9. settings.html         → إعدادات
      10. profile-videos.html  → صفحة جميع الفيديوهات
 
   🆕 التحسينات الجديدة:
-     • 💖 التصميم الزهري الكامل (Pink Rose Gold)
-     • 🎤 تسجيل الصوت وإرساله في الدردشة
-     • 📸 إرسال الصور في الدردشة
+     • 🎬 عرض الفيديو بشكله الطبيعي (contain) بدون تكبير
+     • 📝 النص يظهر أسفل الفيديو في تخطيط منفصل
+     • 📱 دعم كامل للعرض الأفقي (Landscape)
+     • 🖥️ دعم الشاشات الكبيرة (Desktop)
+     • 🔐 واجهة تسجيل دخول واشتراك مطورة بالكامل
+     • 💬 نظام تعليقات متقدم مع ردود
+     • 📤 نظام مشاركة متعدد المنصات
+     • 👥 نافذة منبثقة للمتابعين مع أزرار متابعة
      • 📝 نظام منشورات متكامل
-     • 👥 نافذة منبثقة للمتابعين
      • 🛡️ لوحة تحكم أدمن متكاملة
-     • 🔐 واجهة تسجيل دخول مطورة بالكامل
 
-  🔥 Firebase: bomk-9f6ec
-  ☁️  Cloudinary: lkqbt5yq (preset: yg55_gk)
-
-  💖 MNAENCA PINK EDITION READY! ✨
+  💎 MNAENCA PROFILE 2.0 READY! ✨
 {'='*60}
     """)
 
