@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>💖 MNAENCA | ملف شخصي</title>
+    <title>💎 MNAENCA | ملف شخصي</title>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
@@ -11,12 +11,12 @@
     <style>
         
     :root{
-        --glass:rgba(236,72,153,0.03);
-        --border:rgba(236,72,153,0.12);
-        --accent:#ec4899;
-        --accent2:#f472b6;
-        --bg:#140511;
-        --card:rgba(236,72,153,0.06);
+        --glass:rgba(16,185,129,0.03);
+        --border:rgba(16,185,129,0.12);
+        --accent:#10b981;
+        --accent2:#34d399;
+        --bg:#05140b;
+        --card:rgba(16,185,129,0.06);
         --danger:#ef4444;
         --success:#22c55e;
         --warning:#f59e0b;
@@ -39,10 +39,10 @@
     @keyframes slideDown{from{transform:translateY(0)}to{transform:translateY(100%)}}
     @keyframes scaleIn{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
     @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-    @keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(236,72,153,0.3)}50%{box-shadow:0 0 40px rgba(244,114,182,0.7)}}
+    @keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(16,185,129,0.3)}50%{box-shadow:0 0 40px rgba(52,211,153,0.7)}}
     .spinner{
         width:36px;height:36px;
-        border:3px solid rgba(236,72,153,0.2);
+        border:3px solid rgba(16,185,129,0.2);
         border-top-color:var(--accent);
         border-radius:50%;
         animation:spin 0.7s linear infinite;
@@ -50,14 +50,14 @@
     }
     .toast-msg{
         position:fixed;bottom:120px;left:50%;transform:translateX(-50%);
-        background:rgba(20,5,17,0.95);padding:12px 24px;border-radius:30px;
-        z-index:10000;border:1px solid rgba(236,72,153,0.3);font-size:13px;
+        background:rgba(5,20,11,0.95);padding:12px 24px;border-radius:30px;
+        z-index:10000;border:1px solid rgba(16,185,129,0.3);font-size:13px;
         opacity:0;transition:opacity 0.3s;pointer-events:none;white-space:nowrap;
         box-shadow:0 8px 32px rgba(0,0,0,0.4);
     }
     .toast-msg.show{opacity:1}
     .overlay{
-        position:fixed;inset:0;background:rgba(20,5,17,0.97);
+        position:fixed;inset:0;background:rgba(5,20,11,0.97);
         backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);
         z-index:400;overflow-y:auto;
         animation:fadeIn 0.3s ease;
@@ -65,17 +65,17 @@
     .overlay-header{
         display:flex;justify-content:space-between;align-items:center;
         padding:16px 20px;border-bottom:1px solid var(--border);
-        position:sticky;top:0;background:rgba(20,5,17,0.9);
+        position:sticky;top:0;background:rgba(5,20,11,0.9);
         backdrop-filter:blur(20px);z-index:5;
     }
     .overlay-header h3{font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px}
     .btn-close-overlay{
-        background:rgba(236,72,153,0.1);border:1px solid var(--border);
+        background:rgba(16,185,129,0.1);border:1px solid var(--border);
         color:#fff;width:36px;height:36px;border-radius:50%;
         display:flex;align-items:center;justify-content:center;
         cursor:pointer;font-size:16px;transition:all 0.3s;
     }
-    .btn-close-overlay:hover{background:rgba(236,72,153,0.25);box-shadow:0 0 15px rgba(236,72,153,0.3)}
+    .btn-close-overlay:hover{background:rgba(16,185,129,0.25);box-shadow:0 0 15px rgba(16,185,129,0.3)}
 
     /* ✨ RESPONSIVE LAYOUT ✨ */
     #mainApp {
@@ -105,7 +105,7 @@
             height: 100vh;
             padding: 24px 16px;
             border-right: 1px solid var(--border);
-            background: rgba(20,5,17,0.6);
+            background: rgba(5,20,11,0.6);
             flex-shrink: 0;
             overflow-y: auto;
         }
@@ -114,7 +114,7 @@
             font-size: 24px;
             font-weight: 800;
             margin-bottom: 30px;
-            background: linear-gradient(to bottom,#fff,#fbcfe8);
+            background: linear-gradient(to bottom,#fff,#a7f3d0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex; align-items: center; gap: 10px;
@@ -128,7 +128,7 @@
             transition: all 0.3s;
         }
         .sidebar-nav-item:hover, .sidebar-nav-item.active {
-            background: rgba(236,72,153,0.1);
+            background: rgba(16,185,129,0.1);
             color: #fff;
         }
         .sidebar-nav-item i { font-size: 20px; width: 24px; text-align: center; }
@@ -150,30 +150,31 @@
         body{min-height:100vh;overflow-y:auto;overflow-x:hidden;}
         .cover-section{position:relative;width:100%;height:260px;overflow:hidden;cursor:pointer}
         .cover-img{width:100%;height:130%;object-fit:cover;transition:transform 0.1s linear;transform:translateY(0)}
-        .cover-gradient{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(20,5,17,0.4) 60%,rgba(20,5,17,0.95) 100%);pointer-events:none;z-index:1}
-        .cover-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(236,72,153,0.15) 0%,transparent 70%);pointer-events:none;z-index:2}
-        .cover-edit-btn{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;border:1px solid rgba(236,72,153,0.3);color:#fff;font-size:14px;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.3)}
-        .cover-edit-btn:hover{background:rgba(236,72,153,0.4);box-shadow:0 0 20px rgba(236,72,153,0.5)}
+        .cover-gradient{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(5,20,11,0.4) 60%,rgba(5,20,11,0.95) 100%);pointer-events:none;z-index:1}
+        .cover-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(16,185,129,0.15) 0%,transparent 70%);pointer-events:none;z-index:2}
+        .cover-edit-btn{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;border:1px solid rgba(16,185,129,0.3);color:#fff;font-size:14px;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.3)}
+        .cover-edit-btn:hover{background:rgba(16,185,129,0.4);box-shadow:0 0 20px rgba(16,185,129,0.5)}
         .btn-back{position:fixed;top:20px;right:20px;background:rgba(0,0,0,0.5);backdrop-filter:blur(15px);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:50;border:1px solid var(--border);color:#fff;font-size:16px;transition:all 0.3s}
-        .btn-back:hover{background:rgba(236,72,153,0.3);box-shadow:0 0 20px rgba(236,72,153,0.4)}
+        .btn-back:hover{background:rgba(16,185,129,0.3);box-shadow:0 0 20px rgba(16,185,129,0.4)}
         .avatar-wrap{position:relative;z-index:2;margin-top:-60px;display:flex;justify-content:center}
-        .avatar-lg{width:120px;height:120px;border-radius:50%;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,#ec4899,#f472b6,#fbcfe8);padding:3px;box-shadow:0 0 30px rgba(236,72,153,0.4),0 0 60px rgba(236,72,153,0.1);animation:avatarGlow 3s ease-in-out infinite}
-        @keyframes avatarGlow{0%,100%{box-shadow:0 0 30px rgba(236,72,153,0.4),0 0 60px rgba(236,72,153,0.1)}50%{box-shadow:0 0 40px rgba(244,114,182,0.7),0 0 80px rgba(236,72,153,0.3)}}
+        .avatar-lg{width:120px;height:120px;border-radius:50%;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,#10b981,#34d399,#a7f3d0);padding:3px;box-shadow:0 0 30px rgba(16,185,129,0.4),0 0 60px rgba(16,185,129,0.1);animation:avatarGlow 3s ease-in-out infinite}
+        @keyframes avatarGlow{0%,100%{box-shadow:0 0 30px rgba(16,185,129,0.4),0 0 60px rgba(16,185,129,0.1)}50%{box-shadow:0 0 40px rgba(52,211,153,0.7),0 0 80px rgba(16,185,129,0.3)}}
         .avatar-lg img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid var(--bg)}
-        .avatar-edit-btn{position:absolute;bottom:5px;right:5px;width:30px;height:30px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid var(--bg);color:#fff;font-size:12px;box-shadow:0 0 15px rgba(236,72,153,0.5)}
+        .avatar-edit-btn{position:absolute;bottom:5px;right:5px;width:30px;height:30px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid var(--bg);color:#fff;font-size:12px;box-shadow:0 0 15px rgba(16,185,129,0.5)}
         .online-dot{position:absolute;top:10px;right:10px;width:18px;height:18px;background:#22c55e;border-radius:50%;border:3px solid var(--bg);z-index:3;box-shadow:0 0 10px rgba(34,197,94,0.6)}
         .profile-info{padding:20px 20px 10px;text-align:center}
         .username{font-size:22px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;justify-content:center;gap:8px}
         .bio-text{font-size:13px;opacity:0.7;margin-bottom:8px;max-width:320px;margin-left:auto;margin-right:auto;line-height:1.5}
         .contact-info{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;font-size:12px}
         .contact-info a{color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:5px;background:var(--card);padding:6px 14px;border-radius:20px;border:1px solid var(--border);transition:all 0.3s}
-        .contact-info a:hover{background:rgba(236,72,153,0.15);box-shadow:0 0 15px rgba(236,72,153,0.2)}
+        .contact-info a:hover{background:rgba(16,185,129,0.15);box-shadow:0 0 15px rgba(16,185,129,0.2)}
         .last-seen{font-size:11px;opacity:0.5;display:flex;align-items:center;justify-content:center;gap:5px;margin-top:6px}
         
+        /* ✨ إحصائيات متحركة */
         .stats-row{
             display:flex;justify-content:center;gap:20px;
             margin:15px 20px;padding:18px;
-            background:rgba(236,72,153,0.04);
+            background:rgba(16,185,129,0.04);
             backdrop-filter:blur(20px);border-radius:20px;
             border:1px solid var(--border);
             box-shadow:0 8px 32px rgba(0,0,0,0.2);
@@ -184,36 +185,37 @@
             position:relative;flex:1;
         }
         .stat-item:hover{
-            background:rgba(236,72,153,0.08);
+            background:rgba(16,185,129,0.08);
             transform:translateY(-3px);
-            box-shadow:0 8px 25px rgba(236,72,153,0.15);
+            box-shadow:0 8px 25px rgba(16,185,129,0.15);
         }
         .stat-item:active{transform:scale(0.95)}
         .stat-val{font-size:22px;font-weight:800;color:var(--accent2);transition:all 0.3s}
-        .stat-item:hover .stat-val{color:#fff;text-shadow:0 0 20px rgba(244,114,182,0.8)}
+        .stat-item:hover .stat-val{color:#fff;text-shadow:0 0 20px rgba(52,211,153,0.8)}
         .stat-lbl{font-size:11px;opacity:0.6;margin-top:4px;font-weight:500}
         .stat-icon-mini{font-size:16px;margin-bottom:4px;opacity:0.5}
         .stat-item:hover .stat-icon-mini{opacity:1}
         
         .action-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 20px 20px}
-        .btn{background:rgba(236,72,153,0.06);border:1px solid var(--border);padding:10px 20px;border-radius:25px;color:#fff;cursor:pointer;font-size:13px;transition:all 0.3s;display:flex;align-items:center;gap:6px;backdrop-filter:blur(10px)}
-        .btn:hover{background:rgba(236,72,153,0.15);border-color:var(--accent);box-shadow:0 0 20px rgba(236,72,153,0.2)}
-        .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;font-weight:700;color:#fff;box-shadow:0 8px 25px rgba(236,72,153,0.4)}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(236,72,153,0.6)}
+        .btn{background:rgba(16,185,129,0.06);border:1px solid var(--border);padding:10px 20px;border-radius:25px;color:#fff;cursor:pointer;font-size:13px;transition:all 0.3s;display:flex;align-items:center;gap:6px;backdrop-filter:blur(10px)}
+        .btn:hover{background:rgba(16,185,129,0.15);border-color:var(--accent);box-shadow:0 0 20px rgba(16,185,129,0.2)}
+        .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;font-weight:700;color:#fff;box-shadow:0 8px 25px rgba(16,185,129,0.4)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(16,185,129,0.6)}
         .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent2);font-weight:600}
         
+        /* 🎬 قسم الفيديوهات */
         .section-header{
             display:flex;justify-content:space-between;align-items:center;
             padding:20px 20px 12px;
         }
         .section-title{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
         .btn-see-all{
-            background:rgba(236,72,153,0.1);border:1px solid var(--border);
+            background:rgba(16,185,129,0.1);border:1px solid var(--border);
             color:var(--accent2);padding:6px 14px;border-radius:20px;
             font-size:12px;cursor:pointer;transition:all 0.3s;
             display:flex;align-items:center;gap:6px;
         }
-        .btn-see-all:hover{background:rgba(236,72,153,0.2);box-shadow:0 0 15px rgba(236,72,153,0.2)}
+        .btn-see-all:hover{background:rgba(16,185,129,0.2);box-shadow:0 0 15px rgba(16,185,129,0.2)}
         
         .videos-grid{
             display:grid;grid-template-columns:repeat(3,1fr);
@@ -251,16 +253,17 @@
             border-radius:10px;
         }
         
+        /* 📝 قسم المنشورات */
         .posts-section{padding:0 16px 20px;margin-bottom:20px}
         .post-card{
-            background:rgba(236,72,153,0.04);border:1px solid var(--border);
+            background:rgba(16,185,129,0.04);border:1px solid var(--border);
             border-radius:20px;padding:18px;margin-bottom:12px;
             backdrop-filter:blur(10px);transition:all 0.3s;
             animation:fadeIn 0.4s ease;
         }
-        .post-card:hover{border-color:rgba(236,72,153,0.3);box-shadow:0 8px 30px rgba(236,72,153,0.08)}
+        .post-card:hover{border-color:rgba(16,185,129,0.3);box-shadow:0 8px 30px rgba(16,185,129,0.08)}
         .post-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-        .post-avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.2)}
+        .post-avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.2)}
         .post-avatar img{width:100%;height:100%;object-fit:cover}
         .post-user-info h4{font-size:14px;font-weight:600}
         .post-user-info span{font-size:10px;opacity:0.5}
@@ -271,9 +274,10 @@
         
         .empty-state{text-align:center;opacity:0.5;padding:40px 20px}
         .empty-state i{font-size:48px;color:var(--accent);margin-bottom:12px;display:block}
-        .badge-verified{background:linear-gradient(135deg,#ec4899,#f472b6);color:#fff;font-size:12px;padding:3px 6px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;font-weight:bold;box-shadow:0 0 15px rgba(251,207,232,0.6);animation:verifyGlow 2s ease-in-out infinite}
-        @keyframes verifyGlow{0%,100%{box-shadow:0 0 15px rgba(251,207,232,0.6)}50%{box-shadow:0 0 25px rgba(251,207,232,0.9)}}
+        .badge-verified{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;font-size:12px;padding:3px 6px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;font-weight:bold;box-shadow:0 0 15px rgba(167,243,208,0.6);animation:verifyGlow 2s ease-in-out infinite}
+        @keyframes verifyGlow{0%,100%{box-shadow:0 0 15px rgba(167,243,208,0.6)}50%{box-shadow:0 0 25px rgba(167,243,208,0.9)}}
         
+        /* ✨ Modal للمتابعين */
         .modal-overlay{
             position:fixed;inset:0;background:rgba(0,0,0,0.8);
             backdrop-filter:blur(20px);z-index:500;
@@ -282,7 +286,7 @@
         }
         .modal-sheet{
             width:100%;max-width:500px;max-height:80vh;
-            background:rgba(20,5,17,0.98);
+            background:rgba(5,20,11,0.98);
             border:1px solid var(--border);
             border-radius:28px 28px 0 0;
             overflow:hidden;display:flex;flex-direction:column;
@@ -301,8 +305,8 @@
             padding:12px 20px;cursor:pointer;
             transition:background 0.2s;animation:fadeIn 0.3s ease;
         }
-        .user-list-item:hover{background:rgba(236,72,153,0.04)}
-        .user-list-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.2);flex-shrink:0}
+        .user-list-item:hover{background:rgba(16,185,129,0.04)}
+        .user-list-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.2);flex-shrink:0}
         .user-list-avatar img{width:100%;height:100%;object-fit:cover}
         .user-list-info{flex:1;min-width:0}
         .user-list-info h4{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
@@ -312,11 +316,12 @@
             border:none;color:#fff;padding:7px 16px;border-radius:20px;
             font-size:11px;font-weight:600;cursor:pointer;
             transition:all 0.3s;flex-shrink:0;
-            box-shadow:0 4px 12px rgba(236,72,153,0.3);
+            box-shadow:0 4px 12px rgba(16,185,129,0.3);
         }
-        .btn-follow-sm:hover{box-shadow:0 6px 18px rgba(236,72,153,0.5)}
-        .btn-follow-sm.following{background:rgba(236,72,153,0.1);border:1px solid var(--border);color:#fff;box-shadow:none}
+        .btn-follow-sm:hover{box-shadow:0 6px 18px rgba(16,185,129,0.5)}
+        .btn-follow-sm.following{background:rgba(16,185,129,0.1);border:1px solid var(--border);color:#fff;box-shadow:none}
         
+        /* 🎬 Modal مشغل الفيديو */
         .video-modal{
             position:fixed;inset:0;background:#000;
             z-index:600;display:flex;align-items:center;
@@ -333,12 +338,13 @@
             cursor:pointer;font-size:18px;z-index:5;
         }
         
-        .edit-panel{position:fixed;bottom:0;left:0;right:0;background:rgba(20,5,17,0.98);backdrop-filter:blur(40px);border-top:2px solid var(--accent);border-radius:24px 24px 0 0;padding:24px 20px 40px;z-index:200;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);max-height:80vh;overflow-y:auto;box-shadow:0 -10px 40px rgba(236,72,153,0.1)}
+        /* Edit Panel */
+        .edit-panel{position:fixed;bottom:0;left:0;right:0;background:rgba(5,20,11,0.98);backdrop-filter:blur(40px);border-top:2px solid var(--accent);border-radius:24px 24px 0 0;padding:24px 20px 40px;z-index:200;transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);max-height:80vh;overflow-y:auto;box-shadow:0 -10px 40px rgba(16,185,129,0.1)}
         .edit-panel.show{transform:translateY(0)}
         .edit-panel h3{font-size:18px;font-weight:700;margin-bottom:20px;color:var(--accent2);text-align:center}
         .edit-panel label{display:block;font-size:12px;opacity:0.7;margin-bottom:6px;margin-top:14px}
         .edit-panel input,.edit-panel textarea{width:100%;padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--border);color:#fff;font-size:14px;outline:none;resize:none;font-family:'Segoe UI',sans-serif;transition:border 0.3s}
-        .edit-panel input:focus,.edit-panel textarea:focus{border-color:var(--accent);box-shadow:0 0 15px rgba(236,72,153,0.15)}
+        .edit-panel input:focus,.edit-panel textarea:focus{border-color:var(--accent);box-shadow:0 0 15px rgba(16,185,129,0.15)}
         .edit-actions{display:flex;gap:10px;margin-top:20px}
         .edit-actions button{flex:1;padding:12px;border-radius:25px;font-weight:700;cursor:pointer;font-size:14px;transition:all 0.3s}
         .btn-save{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff}
@@ -346,8 +352,9 @@
         .overlay-panel{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:150;display:none}
         .overlay-panel.show{display:block}
         
+        /* New Post Creator */
         .post-creator{
-            background:rgba(236,72,153,0.04);border:1px solid var(--border);
+            background:rgba(16,185,129,0.04);border:1px solid var(--border);
             border-radius:20px;padding:16px;margin:0 16px 20px;
             backdrop-filter:blur(10px);
         }
@@ -364,20 +371,21 @@
             background:linear-gradient(135deg,var(--accent),var(--accent2));
             border:none;color:#fff;padding:8px 20px;border-radius:20px;
             font-weight:700;cursor:pointer;font-size:12px;
-            box-shadow:0 4px 12px rgba(236,72,153,0.3);
+            box-shadow:0 4px 12px rgba(16,185,129,0.3);
         }
 
+        /* Admin Panel */
         .admin-panel{padding:0 8px;margin:0 8px 100px 8px}
-        .admin-panel h3{color:#fbcfe8;font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px;font-weight:700}
+        .admin-panel h3{color:#a7f3d0;font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px;font-weight:700}
         .admin-stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
-        .stat-card{background:rgba(236,72,153,0.06);border:1px solid rgba(236,72,153,0.15);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(10px)}
-        .stat-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 15px rgba(236,72,153,0.3)}
+        .stat-card{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:16px;padding:16px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(10px)}
+        .stat-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 15px rgba(16,185,129,0.3)}
         .stat-info h4{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:4px;font-weight:500}
         .stat-info span{font-size:22px;font-weight:800}
         .admin-user-item{display:flex;align-items:center;justify-content:space-between;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,0.03);transition:background 0.2s;border-radius:8px}
-        .admin-user-item:hover{background:rgba(236,72,153,0.04)}
+        .admin-user-item:hover{background:rgba(16,185,129,0.04)}
         .admin-user-info{display:flex;align-items:center;gap:12px;flex:1;min-width:0;cursor:pointer}
-        .admin-avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(236,72,153,0.3);flex-shrink:0}
+        .admin-avatar{width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(16,185,129,0.3);flex-shrink:0}
         .admin-avatar img{width:100%;height:100%;object-fit:cover}
         .admin-user-details h4{font-weight:600;font-size:15px}
         .admin-user-details p{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
@@ -385,7 +393,7 @@
         .admin-btn{border:none;border-radius:20px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:5px}
         .btn-ban{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.1)}
         .btn-unban{background:rgba(34,197,94,0.1);color:#4ade80;border:1px solid rgba(34,197,94,0.2)}
-        .btn-verify{background:linear-gradient(135deg,#ec4899,#f472b6);color:#fff;box-shadow:0 4px 12px rgba(236,72,153,0.3)}
+        .btn-verify{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;box-shadow:0 4px 12px rgba(16,185,129,0.3)}
         .btn-delete-video{background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.2)}
         .btn-delete-video:hover{background:rgba(239,68,68,0.3)}
     </style>
@@ -393,7 +401,7 @@
 <body>
 
 <div class="load-center" id="loader" style="display:flex;align-items:center;justify-content:center;min-height:80vh;flex-direction:column;gap:12px;color:rgba(255,255,255,0.5)">
-    <div class="spinner"></div><span>💖 تحميل الملف...</span>
+    <div class="spinner"></div><span>💎 تحميل الملف...</span>
 </div>
 
 <div id="content" style="display:none">
@@ -427,6 +435,7 @@
         <div class="last-seen" id="lastSeenDisplay"></div>
     </div>
 
+    <!-- ✨ إحصائيات محسنة -->
     <div class="stats-row">
         <div class="stat-item" onclick="showUsersModal('following')">
             <div class="stat-icon-mini"><i class="fas fa-user-friends"></i></div>
@@ -452,31 +461,37 @@
 
     <div class="action-btns" id="actionsBar"></div>
 
+    <!-- 📝 منشئ المنشورات (للملف الشخصي فقط) -->
     <div class="post-creator" id="postCreator" style="display:none">
-        <textarea id="newPostContent" placeholder="ماذا يدور في ذهنك؟ 💖" maxlength="500"></textarea>
+        <textarea id="newPostContent" placeholder="ماذا يدور في ذهنك؟ 💎" maxlength="500"></textarea>
         <div class="post-creator-actions">
             <button class="btn-post" onclick="createPost()"><i class="fas fa-paper-plane"></i> نشر</button>
         </div>
     </div>
 
+    <!-- 🎬 قسم الفيديوهات -->
     <div class="section-header">
         <div class="section-title"><i class="fas fa-video" style="color:var(--accent)"></i> الفيديوهات <span id="videosCount" style="font-size:12px;opacity:0.5;margin-right:6px"></span></div>
         <button class="btn-see-all" onclick="showAllVideos()"><span>عرض الكل</span> <i class="fas fa-chevron-left" style="font-size:10px"></i></button>
     </div>
     <div class="videos-grid" id="videosGrid"></div>
 
+    <!-- 📝 قسم المنشورات -->
     <div class="section-header" id="postsHeader">
         <div class="section-title"><i class="fas fa-feather-alt" style="color:var(--accent)"></i> المنشورات <span id="postsCount" style="font-size:12px;opacity:0.5;margin-right:6px"></span></div>
     </div>
     <div class="posts-section" id="postsSection"></div>
 </div>
 
+<!-- ✨ Modal المتابعين/المتابَعين -->
 <div id="usersModal" style="display:none"></div>
+
+<!-- 🎬 Modal مشغل الفيديو -->
 <div id="videoModal" style="display:none"></div>
 
 <div class="overlay-panel" id="overlayPanel" onclick="closeEditPanel()"></div>
 <div class="edit-panel" id="editPanel">
-    <h3>💖 لوحة تعديل الملف الشخصي</h3>
+    <h3>💎 لوحة تعديل الملف الشخصي</h3>
     <label>👤 اسم المستخدم</label>
     <input type="text" id="editUsername" placeholder="اسم المستخدم">
     <label>📝 السيرة الذاتية</label>
@@ -548,8 +563,8 @@
         const u = allUsers[profileUserId];
         if(!u) { document.getElementById('content').innerHTML = '<div class="empty-state" style="padding-top:100px"><i class="fas fa-user-slash"></i><p>المستخدم غير موجود</p></div>'; return; }
         
-        const pinkVerifiedBadge = u.isVerified ? '<span class="badge-verified"><i class="fas fa-check"></i></span>' : '';
-        document.getElementById('nameDisplay').innerHTML = '@' + (u.username || 'مستخدم') + ' ' + pinkVerifiedBadge;
+        const emeraldVerifiedBadge = u.isVerified ? '<span class="badge-verified"><i class="fas fa-check"></i></span>' : '';
+        document.getElementById('nameDisplay').innerHTML = '@' + (u.username || 'مستخدم') + ' ' + emeraldVerifiedBadge;
         document.getElementById('bioDisplay').innerText = u.bio || '';
         
         const contactInfo = document.getElementById('contactInfo');
@@ -591,6 +606,7 @@
             lastSeen.innerHTML = '';
         }
 
+        // Render video grid
         const grid = document.getElementById('videosGrid');
         grid.innerHTML = '';
         if(!uvs.length) { 
@@ -611,6 +627,7 @@
             });
         }
 
+        // Render posts
         renderPosts(userPosts);
 
         const actionsBar = document.getElementById('actionsBar');
@@ -623,7 +640,7 @@
         } else {
             const isFollowing = currentUserData?.following?.[profileUserId];
             actionsBar.innerHTML = `
-                <button class="btn btn-follow ${isFollowing ? 'following' : ''}" id="followBtn" onclick="toggleFollowUser()" style="${isFollowing ? 'background:rgba(236,72,153,0.1);border:1px solid var(--border);box-shadow:none' : 'background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 25px rgba(236,72,153,0.4)'}">
+                <button class="btn btn-follow ${isFollowing ? 'following' : ''}" id="followBtn" onclick="toggleFollowUser()" style="${isFollowing ? 'background:rgba(16,185,129,0.1);border:1px solid var(--border);box-shadow:none' : 'background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 25px rgba(16,185,129,0.4)'}">
                     ${isFollowing ? '<i class="fas fa-user-check"></i> متابع' : '<i class="fas fa-user-plus"></i> متابعة'}
                 </button>
                 <button class="btn btn-primary" onclick="window.location.href='chat.html?uid=${profileUserId}'"><i class="fas fa-comment"></i> مراسلة</button>
@@ -660,6 +677,7 @@
         }).join('');
     }
 
+    // ✨ Modal عرض المتابعين/المتابَعين
     async function showUsersModal(type) {
         const u = allUsers[profileUserId];
         const list = type === 'followers' ? (u?.followers || {}) : (u?.following || {});
@@ -686,7 +704,7 @@
                     <div class="user-list-avatar"><img src="${avatar}" alt="" loading="lazy"></div>
                     <div class="user-list-info">
                         <h4>@${user.username || 'مستخدم'} ${user.isVerified ? '<span class="badge-verified" style="width:16px;height:16px;font-size:9px"><i class="fas fa-check"></i></span>' : ''}</h4>
-                        <p>${user.bio || '💖 عضو في MNAENCA'}</p>
+                        <p>${user.bio || '💎 عضو في MNAENCA'}</p>
                     </div>
                     ${id !== currentUser?.uid ? `<button class="btn-follow-sm ${isFollowingMe ? 'following' : ''}" onclick="event.stopPropagation();toggleFollowModal('${id}', this)">${isFollowingMe ? '<i class="fas fa-user-check"></i> متابع' : '<i class="fas fa-user-plus"></i> متابعة'}</button>` : ''}
                 </div>`;
@@ -720,6 +738,7 @@
         await loadAll();
     }
 
+    // 🎬 تشغيل الفيديو داخل Modal
     function playVideo(url) {
         document.getElementById('videoModal').innerHTML = `
             <div class="video-modal" onclick="closeVideoModal()">
@@ -734,6 +753,7 @@
         document.getElementById('videoModal').style.display = 'none';
     }
 
+    // 📝 عرض كل الفيديوهات
     function showAllVideos() {
         const uvs = allVideos.filter(v => v.sender === profileUserId).sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
         let html = `<div class="modal-overlay" onclick="closeAllVideos()">
@@ -767,6 +787,7 @@
         document.getElementById('videoModal').style.display = 'none';
     }
 
+    // 📝 إنشاء منشور
     async function createPost() {
         const content = document.getElementById('newPostContent').value.trim();
         if(!content || !currentUser) return;
@@ -863,11 +884,11 @@
             await userRef.remove(); await targetRef.remove();
             btn.innerHTML = '<i class="fas fa-user-plus"></i> متابعة';
             btn.style.background = 'linear-gradient(135deg,var(--accent),var(--accent2))';
-            btn.style.boxShadow = '0 8px 25px rgba(236,72,153,0.4)';
+            btn.style.boxShadow = '0 8px 25px rgba(16,185,129,0.4)';
         } else {
             await userRef.set(true); await targetRef.set(true);
             btn.innerHTML = '<i class="fas fa-user-check"></i> متابع';
-            btn.style.background = 'rgba(236,72,153,0.1)';
+            btn.style.background = 'rgba(16,185,129,0.1)';
             btn.style.boxShadow = 'none';
             btn.style.border = '1px solid var(--border)';
         }
@@ -878,7 +899,7 @@
         const u = allUsers[profileUserId];
         const text = `👤 @${u.username || 'مستخدم'}
 📝 ${u.bio || ''}
-💖 MNAENCA 2026`;
+💎 MNAENCA 2026`;
         try { await navigator.clipboard.writeText(text); } catch(e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
         showToast('✅ تم نسخ معلومات الملف الشخصي');
     }
@@ -916,15 +937,15 @@
         adminDiv.innerHTML = `<h3><i class="fas fa-crown"></i> لوحة تحكم الأدمن</h3>
             <div class="admin-stats-grid">
                 <div class="stat-card"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-info"><h4>المستخدمين</h4><span>${totalUsers}</span></div></div>
-                <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#ec4899)"><i class="fas fa-video"></i></div><div class="stat-info"><h4>فيديوهات</h4><span>${totalVideos}</span></div></div>
+                <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#f59e0b,#10b981)"><i class="fas fa-video"></i></div><div class="stat-info"><h4>فيديوهات</h4><span>${totalVideos}</span></div></div>
                 <div class="stat-card"><div class="stat-icon"><i class="fas fa-check-circle"></i></div><div class="stat-info"><h4>موثقين</h4><span>${totalVerified}</span></div></div>
                 <div class="stat-card"><div class="stat-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><i class="fas fa-ban"></i></div><div class="stat-info"><h4>محظورين</h4><span>${totalBanned}</span></div></div>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(236,72,153,0.1);padding-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(16,185,129,0.1);padding-bottom:8px">
                 <span>📋 قائمة المستخدمين</span><span style="font-size:11px">${totalUsers} إجمالي</span>
             </div>
             <div id="adminDynamicList"></div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(236,72,153,0.1);padding-bottom:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px;margin-bottom:14px;color:rgba(255,255,255,0.6);font-size:13px;font-weight:600;border-bottom:1px solid rgba(16,185,129,0.1);padding-bottom:8px">
                 <span>🎬 جميع الفيديوهات</span><span style="font-size:11px">${totalVideos} إجمالي</span>
             </div>
             <div id="adminVideosList"></div>`;
@@ -1010,7 +1031,7 @@
         else window.location.href = 'profile.html?uid=' + id;
     };
 
-    console.log('💖 MNAENCA Profile 3.0 Ready ✨');
+    console.log('💎 MNAENCA Profile 2.0 Ready ✨');
 </script>
 </body>
 </html>
